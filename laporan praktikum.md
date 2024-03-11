@@ -255,14 +255,11 @@ int main() {
 Kode diatas merupakan contoh program yang menggunakan fungsi class dan struct sekaligus. Program tersebut bertujuan menampilkan data siswa dan juga menghitung nilai dari siswa tersebut. Fungsi struct di program ini berupa struct Alamat yang digunakan untuk menyimpan data alamat siswa. Sedangkan class yang digunakan adalah class student. Class Student menyimpan data nama siswa, alamat, dan nilai. Program ini juga memiliki fungsi calculateAverage() untuk menghitung rata-rata nilai. Main function program ini berupa deklarasi objek Student bernama siswa1. Mengisi data siswa dengan nama, alamat (menggunakan struct Alamat), dan nilai. Menampilkan data siswa dan memanggil fungsi calculateAverage() untuk menampilkan rata-rata nilai.
 #### Output:
 
-![Screenshot 2024-03-11 105232](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/67f11a46-0dd9-4298-9f5b-a7f15dcaae3e)
-
+![Screenshot 2024-03-11 112836](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/941e48f2-d3ab-4991-b1a2-04398b40b15d)
 
 #### Full Screenshot
 
 ![Screenshot 2024-03-11 112933](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/a9fbcbc1-0e51-4d69-92b7-aba51271bc70)
-
-
 
 
 ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
@@ -305,11 +302,12 @@ Kode di atas merupakan salah satu contoh program yang menggunakan fungsi map. Ma
 Data ditambahkan ke map dengan menggunakan key dan value. Kemudian dilakukan untuk iterasi seluruh data di map dan menambahkan nilai ke totalTinggi. Rata-rata tinggi badan dihitung dengan membagi totalTinggi dengan jumlah data di map (tinggiBadan.size()). Rata-rata nilai ditampilkan ke layar. Pada program ini mengunakan fungsi double dengan tujuan untuk mendapatkan nilai rata-rata yang akurat, totalTinggi diubah menjadi double sebelum dibagi dengan tinggiBadan.size(). Tipe data double dapat menyimpan nilai floating-point, yang memungkinkan hasil pembagian lebih akurat.
 #### Output:
 
-![Screenshot 2024-03-11 112836](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/941e48f2-d3ab-4991-b1a2-04398b40b15d)
+![Screenshot 2024-03-11 105232](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/67f11a46-0dd9-4298-9f5b-a7f15dcaae3e)
 
 #### Full Screenshot
 
-![Screenshot 2024-03-11 112933](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/a9fbcbc1-0e51-4d69-92b7-aba51271bc70)
+![Screenshot 2024-03-11 110017](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/69121829-0b5a-48c6-ac10-c4b96a232ed7)
+
 
  #### Perbedaan Array dan Map
 
