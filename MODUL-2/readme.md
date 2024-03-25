@@ -328,6 +328,7 @@ Dengan mempelajari materi array dapat diketahui bahwa array memiliki beberapa je
 - Array satu dimensi
 - Array dua dimensi
 - Array multidimensi
+  
  Praktikum terkait array juga membantu dalam memahami pengertian, deklarasi, dan penggunaan array dalam program C++
  
 
