@@ -334,5 +334,7 @@ Dengan mempelajari materi array dapat diketahui bahwa array memiliki beberapa je
 ## Referensi
 
 [1] Zayid Musiafa, SDIA: Pemrograman Python C C++ Java.(n.p): CV. AA. RIZKY, 2022.
-[2] A. Sindar, Struktur Data dan Algoritma dengan C++.(n.p) CV. AA. RIZKY, 2019  
+
+[2] A. Sindar, Struktur Data dan Algoritma dengan C++.(n.p) CV. AA. RIZKY, 2019 
+
 [3] Rangga Guntara. ALGORITMA DAN PEMROGRAMAN DASAR: Menggunakan Bahasa Pemrograman C++ dengan Contoh Kasus Aplikasi untuk Bisnis dan Manajemen. (n.p.): CV. Ruang Tentor, 2023
