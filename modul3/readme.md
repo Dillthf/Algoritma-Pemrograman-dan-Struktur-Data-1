@@ -10,11 +10,11 @@ Algoritma Sorting terbagi atas:
 
 A. Insertion Sort
 
-Insertion Sort adalah sebuah algortima sederhana yang cukup efisien untuk mengurutkan sebuah list yang hampir terurut. Algoritma ini juga bisa digunakan sebagai bagian algoritma yang lebih canggih. Cara kerja algoritma ini adalah dengan  mengambil elemen list satu-per-satu dan memasukkannya di posisi yang benar seperti namanya. Pada array, list yang baru dan elemen sisanya dapat berbagi tempat di array, meskipun cukup rumit. Untuk menghemat memori, implementasinya menggunakan pengurutan di tempat yang membandingkan elemen saat itu dengan elemen sebelumnya yang sudah diurut, lalu menukarnya terus sampai posisinya tepat. Hal ini terus dilakukan sampai tidak ada elemen tersisa di input [2]. 
+Insertion Sort adalah sebuah algortima sederhana yang cukup efisien untuk mengurutkan sebuah list yang hampir terurut. Algoritma ini juga bisa digunakan sebagai bagian algoritma yang lebih canggih. Cara kerja algoritma ini adalah dengan  mengambil elemen list satu-per-satu dan memasukkannya di posisi yang benar seperti namanya. Pada array, list yang baru dan elemen sisanya dapat berbagi tempat di array, meskipun cukup rumit. Untuk menghemat memori, implementasinya menggunakan pengurutan di tempat yang membandingkan elemen saat itu dengan elemen sebelumnya yang sudah diurut, lalu menukarnya terus sampai posisinya tepat. Hal ini terus dilakukan sampai tidak ada elemen tersisa di input [1]. 
 
 B. Selection Sort
 
-Selection sort adalah suatu metode pengurutan yang membandingkan elemen yang sekarang dengan elemen berikutnya sampai ke elemen yang terakhir. Jika ditemukan elemen lain yang lebih kecil dari elemen sekarang maka dicatat posisinya dan langsung ditukar [3].
+Selection sort adalah suatu metode pengurutan yang membandingkan elemen yang sekarang dengan elemen berikutnya sampai ke elemen yang terakhir. Jika ditemukan elemen lain yang lebih kecil dari elemen sekarang maka dicatat posisinya dan langsung ditukar [2].
 Metode selection sort adalah melakukan pemilihan dari suatu nilai yang terkecil dan kemudian menukarnya dengan elemen paling awal, lalu membandingkan dengan elemen yang sekarang dengan elemen berikutnya sampai dengan elemen terakhir, perbandingan dilakukan terus sampai tidak ada lagi pertukaran data [1]
 
 
@@ -75,7 +75,7 @@ int main(){
 }
 ```
 
-Kode di atas merupakan contoh kalkulator sederhana. Dengan program utamanya melakukan operasi perhitungan dua nilai bilangan. Pengguna dapat menginput operasi (bertipe char) berupa +, -, *, dan / serta dua angka yang akan dioperasikan (bertipe float) sesuai kebutuhan. Inputan aka dieksekusi sesuai case operator yang dimasukkan menggunakan fungsi cout. Jika operator yang dimasukkan tidak sesuai dengan empat case yang ada, maka program akan menghasilkan output "Error! operator is not correct".
+Kode di atas adalah contoh pengaplikasian bubble sort secara ascending. Kode tersebut terdiri dari tiga fungsi, yaitu 'bubble_sort', 'print_array', dan 'main'. Fungsi bubble_sort menerima dua parameter, arr yang berisi array bilangan dan length yang berisi jumlah elemen dalam array. Terdapat variabel not_sorted yang dipergunakan untuk menentukan apakah array sudah terurut atau belum. Saat awal, not_sorted diset nilai true. Kemudian, algoritma bubble sort menggunakan perulangan while untuk mengurutkan array bilangan. Perulangan for yang berada dalam perulangan while digunakan untuk menyisipkan elemen yang belum terurut pada posisi yang tepat. Jika terdapat elemen yang belum terurut, maka not_sorted akan diubah menjadi true dan perulangan while akan dilanjutkan. Fungsi ini menggunakan algoritma bubble sort untuk mengurutkan array bilangan. Selanjutnya adalah fungsi print_array: Fungsi ini menerima dua parameter, a yang berisi array bilangan dan length yang berisi jumlah elemen dalam array. Fungsi ini menggunakan perulangan untuk mencetak semua elemen dalam array bilangan. Terdapat perulangan for yang digunakan untuk mencetak semua elemen dalam array bilangan. Fungsi void dipakai sehingga baris program tersebut tidak memerlukan return atau pengembalian nilai. Fungsi terakhir adalah main, fungsi ini merupakan fungsi utama yang melakukan pengurutan array bilangan menggunakan algoritma bubble sort dan menampilkan hasil pengurutan. Pada fungsi main, terdapat variabel length yang berisi jumlah elemen dalam array bilangan. Array bilangan a diisi dengan beberapa elemen. Kemudian, fungsi bubble_sort dipanggil dengan parameter a dan length untuk melakukan pengurutan array bilangan. Setelah pengurutan selesai, fungsi print_array dipanggil dengan parameter a dan length untuk menampilkan hasil pengurutan.
 
 ### Guided 2
 #### Mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort
@@ -124,9 +124,11 @@ int main (){
 }
  ```
 
- Kode diatas merupakan program yang menggunakan fungsi struct untuk menyimpan data mahasiswa. Struct Mahasiswa menyimpan data mhs1 dan mhs2 berupa nama, alamat, dan umur. Kemudian data yang disimpanpada struct ditampilkan melalui fungsi print.
-
-
+Kode di atas adalah contoh pengaplikasian insertion sort untuk mengurutkan karakter secara descending. Kode tersebut terdiri dari tiga fungsi, yaitu 'insertion_sort', 'print_array', dan 'main'.
+Fungsi 'insertion_sort' menerima dua parameter yaitu  "arr" berupa array dengan elemen karakter dan "length" (jumlah karakter dalam array). Fungsi 'insertion_sort' memiliki perulangan "for" akan mengulang setiap elemen dalam array Variabel "j" berisi indeks elemen yang sedang diproses, dan "i" berisi indeks elemen yang akan diproses. Perulangan "while" digunakan untuk membandingkan elemen dengan elemen sebelumnya. Jika elemen yang diproses lebih kecil dari elemen sebelumnya, maka elemen akan diganti dengan elemen sebelumnya dan menurunkan indeks "j" Setelah perulangan "while" selesai, indeks "j" dijumlahkan dengan 1.
+Fungsi "print_array" menerima dua parameter: "a" (array karakter) dan "length" (jumlah karakter dalam array). Dalam perulangan "for" yang berada dalam "print_array", semua elemen dalam array karakter dicetak.
+Fungsi "main" menerima dua parameter: "length" (jumlah karakter dalam array) dan "a" (array karakter).
+Urutan karakter sebelum sorting dan setelah sorting ditampilkan menggunakan fungsi "print_array".
 ## Unguided 
 
 ### 1.Kelas S1 IF 2016 G memiliki 5 mahasiswa. Pada akhir semester mereka menerima lembar Indeks Prestasi Semester (IPS), masing-masing mahasiswa tersebut memiliki IPS sebagai berikut: {3.8, 2.9, 3.3, 4.0, 2.4}. Buatlah program untuk mengurutkan IPS mahasiswa tersebut dari yang terbesar hingga terkecil dengan menggunakan algoritma Selection Sort!
@@ -135,180 +137,188 @@ int main (){
 #include <iostream>
 using namespace std;
 
-int main() {
-  float nilai, hasil;
-  int pilihan;
+void selection_Sort(double arr[], int n) { // Deklarasi variable. Dimana variabel arr berisi Indeks Prestasi Semester, dan n berisi jumlah mahasiswa
+    for (int i = 0; i < n - 1; ++i) { // Perulangan for ini memulai dari indeks i = 0 dan berhenti ketika indeks i menjadi sama dengan n-1.
+        int elemen_terurut = i; // Variabel elemen_terurut berisi indeks elemen yang terurut terkecil hingga saat ini.
+        for (int j = i + 1; j < n; ++j) { // Perulangan for ini memulai dari indeks i+1 dan berhenti ketika indeks j menjadi sama dengan n.
+            if (arr[j] > arr[elemen_terurut]) { //Jika elemen arr[j] lebih besar dari elemen arr[elemen_terurut], maka indeks elemen_terurut diubah menjadi j
+                elemen_terurut = j; 
+            } // AKhir dari if
+        } // Akhir dari perulangan for
+        swap(arr[i], arr[elemen_terurut]); // Setelah mencari elemen yang terurut terkecil, elemen arr[i] diganti dengan elemen arr[elemen_terurut]
+    } // Akhir dari perulangan for
+} // Akhir dari selection_Sort
 
-  // Menampilkan menu pilihan satuan
-  cout << "Pilih satuan yang ingin dikonversi:" << endl;
-  cout << "1. Meter ke Kilometer" << endl;
-  cout << "2. Kilometer ke Meter" << endl;
-  cout << "Masukkan pilihan: ";
-  cin >> pilihan;
+int main() { // Fungsi main merupakan fungsi utama program.
+    double arr[] = {3.8, 2.9, 3.3, 4.0, 2.4}; // Deklarasi variabel array yang berisi tipe data double. Elemen dalam array tersebut adalah Indeks Prestasi Semester
+    int n = sizeof(arr) / sizeof(arr[0]); // Menghitung jumlah elemen dalam array arr dengan menggunakan fungsi sizeof
 
-  // Meminta nilai yang ingin dikonversi
-  cout << "Masukkan nilai: ";
-  cin >> nilai;
+    cout << "Indeks Prestasi Semester Mahasiswa sebelum diurutkan : "; //Menampilkan teks "Indeks Prestasi Semester Mahasiswa sebelum diurutkan :" ke layar
+    for (int i = 0; i < n; ++i) { // Perulangan for yang berada dalam main mengulang setiap elemen dalam array arr.
+        cout << arr[i] << " "; // Menampilkan setiap elemen dalam array arr ke layar.
+    } // Akhir prulangan for
+    cout << endl; 
 
-  // Melakukan konversi berdasarkan pilihan
-  switch (pilihan) {
-    case 1:
-      hasil = nilai / 1000;
-      cout << nilai << " meter sama dengan " << hasil << " kilometer." << endl;
-      break;
-    case 2:
-      hasil = nilai * 1000;
-      cout << nilai << " kilometer sama dengan " << hasil << " meter." << endl;
-      break;
-    default:
-      cout << "Pilihan tidak valid!" << endl;
-  }
+    selection_Sort(arr, n); // Berupa fungsi selection_Sort dengan parameter arr (array yang akan diurutkan) dan n (jumlah elemen dalam array).
 
-  return 0;
-}
+    cout << "Indeks Prestasi Semester Mahasiswa setelah diurutkan : "; // Menampilkan teks "Indeks Prestasi Semester Mahasiswa setelah diurutkan :" ke layar.
+    for (int i = 0; i < n; ++i) { // Perulangan for yang berada dalam main mengulang setiap elemen dalam array arr setelah diurutkan.
+        cout << arr[i] << " "; // Menampilkan setiap elemen dalam array arr setelah diurutkan ke layar.
+    } // Akhir perulangan for
+    cout << endl;
+
+    return 0;
+}// Akhir main
+ 
+
 ```
 
-Kode di atas merupakan program konversi satuan sederhana. Pengguna dapat mengonversi satuan panjang berupa meter dan juga kilometer. Deklarasi variabel berupa nilai, hasil, dan pilihan. Program mendefinisikan tipe data float pada inputan nilai dan hasil, sehingga memungkinkan operasi dan hasil berupa bilangan desimal. Sementara untuk menjalankan program, inputan yang dimasukkan bertipe ineteger sehingga akan mengeksekusi melalui fungsi cin >>. Program menggunakan swtich untuk mengkonversi berdasarkan pilian pengguna. Kemudian hasil akan ditampilkan di layar. Jika pilihna yang diinput pengguna tidak sesuai maka output yang ditampilkan adalah "Pilihan tidak valid!".
+Kode di atas merupakan program yang mengurutkan Indeks Prestasi Semester Mahasiswa secara descending menggunakan slection sort. Dimana fungsi Selection Sort untuk mengurutkan array secara menurun. Kemudian menggunakan perulangan untuk membandingkan lalu menukar elemen-elemen array agar terurut secara menurun. Fungsi utama program adalah mendeklarasikan array yang berisi nilai indeks prestarsi semester mahasiswa, kemudian nilai tersebut ditampilkan sebelum diurutkan, kemudia mengurutkan dengan fungsi selection_sort, elemen yang telah diurut akan ditampilkan.
+
+Kompleksitas waktu program di atas adalah O(n^2), dimana n adalah jumlah elemen dalam array. Hal ini disebabkan karena perulangan for yang berada dalam selection_Sort berulang sebanyak n-1 kali, dan setiap iterasi dari perulangan for berulang sebanyak n-i kali.
 #### Output:
 
-![Screenshot 2024-03-11 103018](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/deb90ae6-0336-487b-b11e-ef1dab4eae23)
+![Screenshot 2024-04-01 112522](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/8c489aa6-d83f-48f2-8dbd-fd348d04f5c6)
 
 
 #### Full screenshot 
+![Screenshot 2024-04-01 112537](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/968844fb-ee1f-4a69-b6cb-205bf9b1bc62)
 
-![Screenshot 2024-03-11 103207](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/517bd842-4108-4e96-99ac-6de4aa9c7e19)
 
 
-#### Kesimpulan
+### 2.Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan namanama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
 
-Tipe data primitif merupakan tipe data yang paling mendasar. Sekaligus menjadi tipe data yang penting dalam setipa pemrograman yang dibuat. Tipe data primitif seperti int, char, float terus digunakan dalam tipe-tipe data lainnya.
-
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
-Secara umum kedua fungsi ini dapat digunakan untuk menyimpan data. Namun, kedua fungsi ini memiliki perbedaan spesifik. Class adalah sebuah template untuk membuat objek dengan karakteristik dan kemampuan yang sama. Class memiliki anggota (member) yang terdiri dari variabel (data) dan fungsi (method). Class dapat mewarisi (inheritance) sifat dan kemampuan dari class lain. Class dapat diakses dengan public, private, dan protected access specifier untuk mengatur visibilitas anggota class. Sedangkan struct secara default memiliki public access specifier untuk semua anggotanya. Struct tidak mendukung inheritance. Struct umumnya digunakan untuk membuat struktur data sederhana.
-
-#### Contoh Program
 ```C++
 #include <iostream>
-#include <vector>
-
+#include <string>
 using namespace std;
+void bubble_Sort(string arr[], int n) { // Deklarasi variable. Dimana variabel arr berisi nama warga dengan tipe data string, dan n berisi jumlah warga
+    for (int i = 0; i < n - 1; ++i) { // Perulangan for ini memulai dari indeks i = 0 dan berhenti ketika indeks i menjadi sama dengan n-1.
+        int elemen_terurut = i; // Variabel elemen_terurut berisi indeks elemen yang terurut terkecil hingga saat ini.
+        for (int j = i + 1; j < n; ++j) { // Perulangan for ini memulai dari indeks i+1 dan berhenti ketika indeks j menjadi sama dengan n.
+            if (arr[j] < arr[elemen_terurut]) { //Jika elemen arr[j] lebih kecil dari elemen arr[elemen_terurut], maka indeks elemen_terurut diubah menjadi j
+                elemen_terurut = j;
+            } // Akhir dari if
+        } // Akhir dari for
+        swap(arr[i], arr[elemen_terurut]); // Setelah mencari elemen yang terurut terkecil, elemen arr[i] diganti dengan elemen arr[elemen_terurut]
+    } // Akhir dari for
+} // Akhir dari bubble_sort
 
-// Struct untuk menyimpan data alamat
-struct Alamat {
-  string Jalan;
-  string Kecamatan;
-  string Kabupaten;
-};
+int main() { // Fungsi main merupakan fungsi utama program.
+    string arr[] = {"siti", "situ", "sana", "ana", "ani", "caca", "cici", "dida", "dodo", "dadi"}; // Deklarasi variabel array yang berisi tipe data string. Elemen dalam array tersebut adalah nama-nama warga
+    int n = sizeof(arr) / sizeof(arr[0]); // Menghitung jumlah elemen dalam array arr dengan menggunakan fungsi sizeof
 
-// Class untuk menyimpan data siswa
-class Student {
-public:
-  string name;
-  Alamat alamat; // Menggunakan struct Alamat
-  vector<int> nilai; // Vektor untuk menyimpan nilai
 
-  // Fungsi untuk menghitung rata-rata nilai
-  double calculateAverage() {
-    double total = 0;
-    for (int grade : nilai) {
-      total += grade;
-    }
-    return total / nilai.size();
-  }
-};
+    cout << "Nama warga sebelum diurutkan: "; //Menampilkan teks "Nama warga sebelum diurutkan :" ke layar
+    for (int i = 0; i < n; ++i) { // Perulangan for yang berada dalam main mengulang setiap elemen dalam array arr.
+        cout << arr[i] << " "; // Menampilkan setiap elemen dalam array arr ke layar.
+    } // Akhir prulangan for
+    cout << endl;
 
-int main() {
-  // Deklarasi objek Student
-  Student siswa1;
+    bubble_Sort(arr, n); // Berupa fungsi bubble_Sort dengan parameter arr (array yang akan diurutkan) dan n (jumlah elemen dalam array).
 
-  // Mengisi data siswa
-  siswa1.name = "Avny";
-  siswa1.alamat.Jalan = "Jalan Komak";
-  siswa1.alamat.Kecamatan = "Nubatukan";
-  siswa1.alamat.Kabupaten = "Lembata";
-  siswa1.nilai.push_back(87);
-  siswa1.nilai.push_back(93);
-  siswa1.nilai.push_back(85);
+    cout << "Nama warga setelah diurutkan: "; //Menampilkan teks "Nama warga setelah diurutkan :" ke layar
+    for (int i = 0; i < n; ++i) { // Perulangan for yang berada dalam main mengulang setiap elemen dalam array arr setelah diurutkan.
+        cout << arr[i] << " ";
+    } // Akhir perulangan for
+    cout << endl;
 
-  // Menampilkan data siswa
-  cout << "Nama: " << siswa1.name << endl;
-  cout << "Alamat: " << siswa1.alamat.Jalan << ", " << siswa1.alamat.Kecamatan << ", " << siswa1.alamat.Kabupaten << endl;
+    return 0;
+} // Akhir main
 
-  // Menampilkan rata-rata nilai
-  double average = siswa1.calculateAverage();
-  cout << "Rata-rata nilai: " << average << endl;
+ ```
 
-  return 0;
-}
-```
 
-Kode diatas merupakan contoh program yang menggunakan fungsi class dan struct sekaligus. Program tersebut bertujuan menampilkan data siswa dan juga menghitung nilai dari siswa tersebut. Fungsi struct di program ini berupa struct Alamat yang digunakan untuk menyimpan data alamat siswa. Sedangkan class yang digunakan adalah class student. Class Student menyimpan data nama siswa, alamat, dan nilai. Program ini juga memiliki fungsi calculateAverage() untuk menghitung rata-rata nilai. Main function program ini berupa deklarasi objek Student bernama siswa1. Mengisi data siswa dengan nama, alamat (menggunakan struct Alamat), dan nilai. Menampilkan data siswa dan memanggil fungsi calculateAverage() untuk menampilkan rata-rata nilai.
+Program ini menggunakan algoritma Bubble Sort untuk mengurutkan nama warga Pak RT. Fungsi "bubble_sort" menerima dua parameter: "arr" (array nama warga) dan "n" (jumlah warga). Fungsi ini menggunakan perulangan "for" untuk mengurutkan nama warga menggunakan algoritma Bubble Sort. Setelah proses sorting selesai, nama warga akan terurut sesuai dengan alfabet.
+Kompleksitas waktu kode di atas dapat diklasifikasikan menjadi O(n^2), dimana n merupakan jumlah elemen dalam array. Algoritma Bubble Sort membutuhkan waktu yang lambat ketika jumlah elemen dalam array meningkat. Karena perulangan yang dilakukan dalam algoritma Bubble Sort, kompleksitas waktu akan meningkat seiring dengan jumlah elemen dalam array.
+
+
 #### Output:
 
-![Screenshot 2024-03-11 112836](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/941e48f2-d3ab-4991-b1a2-04398b40b15d)
+![Screenshot 2024-04-01 120905](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/19e81056-6da2-4d4e-9a1e-a9473ee398db)
 
 #### Full Screenshot
 
-![Screenshot 2024-03-11 112933](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/a9fbcbc1-0e51-4d69-92b7-aba51271bc70)
+![Screenshot 2024-04-01 120916](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/2ed0a1a7-b169-4630-a775-1f88282f5359)
 
-
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
+### 3. Buatlah program yang meminta user menginputkan suatu bilangan n dan meminta user untuk menginputkan sejumlah n karakter. Kemudian program akan melakukan sorting secara menaik (ascending) dan menurun (descending)!
 
 ```C++
 #include <iostream>
-#include <map>
+#include <algorithm>
 
 using namespace std;
 
 int main() {
-  // Deklarasi map untuk menyimpan data tinggi badan
-  map<string, int> tinggiBadan;
+  int n; // Mendeklarasikan variabel n untuk menyimpan jumlah karakter
+  cout << "Masukkan jumlah karakter: " << endl; // Meminta user untuk memasukkan nilai n dan menyimpannya dalam variabel n
+  cin >> n;
 
-  // Menambahkan data ke map
-  tinggiBadan["Woozie"] = 166;
-  tinggiBadan["Mingyu"] = 187;
-  tinggiBadan["The8"] = 178;
+  char karakter[n]; // Mendeklarasikan array karakter karakter dengan ukuran n
 
-  // Menghitung total tinggi badan
-  int totalTinggi = 0;
-  for (auto it = tinggiBadan.begin(); it != tinggiBadan.end(); ++it) {
-    totalTinggi += it->second;
+  // Meminta user untuk memasukkan karakter
+  cout << "Masukkan " << n << " karakter: " << endl;
+  for (int i = 0; i < n; i++) {
+    cin >> karakter[i];
   }
 
-  // Menghitung rata-rata tinggi badan
-  double rataRata = (double)totalTinggi / tinggiBadan.size();
+  // Sorting karakter secara ascending
+  for (int i = 0; i < n - 1; ++i) { // Perulangan for ini memulai dari indeks i = 0 dan berhenti ketika indeks i menjadi sama dengan n
+    for (int j = i + 1; j < n; j++) { // Perulangan for ini memulai dari indeks j = i + 1 dan berhenti ketika indeks j menjadi sama dengan n
+      if (karakter[i] > karakter[j]) { // Di dalam perulangan kedua, karakter pada indeks i dibandingkan dengan karakter pada indeks j dengan operator >
+        swap(karakter[i], karakter[j]); // Jika karakter pada indeks i lebih besar dari karakter pada indeks j, maka kedua karakter tersebut ditukar
+      } // Akhir if
+    } // Akhir perulangan for
+  } // Akhir perulangan for
 
-  // Menampilkan hasil
-  cout << "Rata-rata tinggi badan : " << rataRata << endl;
+  // Menampilkan hasil sorting ascending
+  cout << "Karakter setelah sorting ascending: " << endl;
+  for (int i = 0; i < n; ++i) {  //  mengulang dari indeks 0 sampai n-1
+    cout << karakter[i] << endl; // Di dalam perulangan, karakter pada indeks i dicetak ke layar
+  }
+
+  // Sorting karakter secara descending
+  for (int i = 0; i < n - 1; i++) { // Perulangan for ini memulai dari indeks i = 0 dan berhenti ketika indeks i menjadi sama dengan n
+    for (int j = i + 1; j < n; j++) { // Perulangan for ini memulai dari indeks j = i + 1 dan berhenti ketika indeks j menjadi sama dengan n
+      if (karakter[i] < karakter[j]) { // Di dalam perulangan kedua, karakter pada indeks i dibandingkan dengan karakter pada indeks j dengan operator <
+        swap(karakter[i], karakter[j]); // Jika karakter pada indeks i lebih kecil dari karakter pada indeks j, maka kedua karakter tersebut ditukar
+      } // Akhir if
+    } // Akhir perulangan for
+  } // Akhir perulangan for
+
+  // Menampilkan hasil sorting descending
+  cout << "Karakter setelah sorting descending: " << endl; 
+  for (int i = 0; i < n; i++) {  //  mengulang dari indeks 0 sampai n-1
+    cout << karakter[i] << endl; 
+  }
+  
 
   return 0;
 }
 
-
 ```
 
+Kode di atas merupakan salah satu contoh program sorting. Pada bagian awal menyimpan jumlah karakter yang diinput user dalam variabel n. Menyimpan n karakter yang diinput user dalam array karakter.Bagian selanjutnya adalah mengurutkan secara Ascending & Descending. Dengan mengurutkan karakter dalam array karakter dari kecil ke besar (ascending) atau dari besar ke kecil (descending) menggunakan perulangan. Jika ada dua karakter yang tidak berurutan, tukar tempatnya. Yang terakhir adalah menampilkan urutan.
+Dua perulangan for digunakan untuk mengurutkan karakter. Dalam setiap perulangan for dalam, terdapat perbandingan dua karakter. Perbandingan dua karakter membutuhkan waktu konstan, yaitu O(1). Oleh karena itu, kompleksitas waktu total untuk sorting adalah O(n * n), yang disederhanakan menjadi O(n^2).
 
-Kode di atas merupakan salah satu contoh program yang menggunakan fungsi map. Map dideklarasikan dengan map<string, int>. Ini digunakan untuk menyimpan data tinggi badan dengan key (nama) bertipe string dan value (nilai) bertipe int.
-Data ditambahkan ke map dengan menggunakan key dan value. Kemudian dilakukan untuk iterasi seluruh data di map dan menambahkan nilai ke totalTinggi. Rata-rata tinggi badan dihitung dengan membagi totalTinggi dengan jumlah data di map (tinggiBadan.size()). Rata-rata nilai ditampilkan ke layar. Pada program ini mengunakan fungsi double dengan tujuan untuk mendapatkan nilai rata-rata yang akurat, totalTinggi diubah menjadi double sebelum dibagi dengan tinggiBadan.size(). Tipe data double dapat menyimpan nilai floating-point, yang memungkinkan hasil pembagian lebih akurat.
 #### Output:
 
-![Screenshot 2024-03-11 105232](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/67f11a46-0dd9-4298-9f5b-a7f15dcaae3e)
+
+![Screenshot 2024-04-01 130344](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/715fd834-b8c0-421c-a8b1-a196c9e78eeb)
+
 
 #### Full Screenshot
 
-![Screenshot 2024-03-11 110017](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/69121829-0b5a-48c6-ac10-c4b96a232ed7)
+![Screenshot 2024-04-01 130406](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/e7316aaf-65f9-46fb-a4fc-64436a884f41)
 
 
- #### Perbedaan Array dan Map
-
-Perbedaan antara map dan array dapat dilihat dari urutan data, Pada array data diurutkan berdasarkan indeks sedangkan pada map data tidak diurutkan. Akses data pada array berupa indeks sedangkan map berupa key. Tipe data pada array bertipe sama sedangkan map dapat memuat beragam tipe. Pada array diizinkan duplikasi data, sedangkan pada map karena karakteristik key unik sehingga tidak dapat menduplikasi data. Perbedaan terakhir berupa kecepatan operasi. Array cepat untuk operasi akses dan modifikasi data sedangkan map lebih lambat untuk operasi akses dan modifikasi data.
-
-
-## Kesimpulan
-
-Tipe data terdiri dari berbagai macam yang kemudian digunakan sesuai kebutuhan pembuatan program. Pemahaman akan tipe-tipe data diperlukan sebagai dasar pemrograman. Pemahaman yang baik akan menciptakan dan meningkatkan kemampuan mahasiswa untuk mengenali dan membedakan tipe-tipe data sehingga mahasiswa dapat memilih tipe data yang tepat sesuai kebutuhan. Dengan adanya praktikum terkait tipe data juga membantu mahasiswa untuk meningkatkan keefetifan program yang dibuat.
  
-
 ## Referensi
 
-[1] S. Hanief, I. Jepriana, Konsep Algoritme dan Aplikasinya dalam Bahasa Pemrograman C++. I. Yogyakarta : Andi, 2020
+[1] Panny Agustia Rahayuningsih, Analisis Perbandingan Kompleksitas Algoritma Pengurutan Nilai (Sorting), Jurnal Evolusi, vol.4, no.2. 2016
+
+[2] Yahya, Sofyansyah Yusari, Analisa 
+Perbandingan Algoritma Bubble Sort dan 
+Selection Sort Dengan Metode 
+Perbandingan Eksponensial. Jurnal Pelita 
+Informatika Budi Darma, Vol : VI, No : 3, 2014 
