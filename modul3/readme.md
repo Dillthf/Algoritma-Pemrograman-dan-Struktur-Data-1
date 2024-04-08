@@ -317,8 +317,12 @@ Dua perulangan for digunakan untuk mengurutkan karakter. Dalam setiap perulangan
 
 [1] Panny Agustia Rahayuningsih, Analisis Perbandingan Kompleksitas Algoritma Pengurutan Nilai (Sorting), Jurnal Evolusi, vol.4, no.2. 2016
 
+<<<<<<< HEAD
 [2] Yahya, Sofyansyah Yusari, Analisa 
 Perbandingan Algoritma Bubble Sort dan 
 Selection Sort Dengan Metode 
 Perbandingan Eksponensial. Jurnal Pelita 
 Informatika Budi Darma, Vol : VI, No : 3, 2014 
+=======
+[2] Yahya, Sofyansyah Yusari, Analisa Perbandingan Algoritma Bubble Sort dan Selection Sort Dengan Metode Perbandingan Eksponensial. Jurnal Pelita Informatika Budi Darma, Vol : VI, No : 3, 2014 
+>>>>>>> a26b784 (first commit)
