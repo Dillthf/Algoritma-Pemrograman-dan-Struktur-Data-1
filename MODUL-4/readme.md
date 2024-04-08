@@ -260,156 +260,140 @@ void binary_search(string kalimat, char huruf) {
     }
 }
 
-
 ```
 
-Kode di atas merupakan program konversi satuan sederhana. Pengguna dapat mengonversi satuan panjang berupa meter dan juga kilometer. Deklarasi variabel berupa nilai, hasil, dan pilihan. Program mendefinisikan tipe data float pada inputan nilai dan hasil, sehingga memungkinkan operasi dan hasil berupa bilangan desimal. Sementara untuk menjalankan program, inputan yang dimasukkan bertipe ineteger sehingga akan mengeksekusi melalui fungsi cin >>. Program menggunakan swtich untuk mengkonversi berdasarkan pilian pengguna. Kemudian hasil akan ditampilkan di layar. Jika pilihna yang diinput pengguna tidak sesuai maka output yang ditampilkan adalah "Pilihan tidak valid!".
+Program di atas dapat mencari huruf dari sebuah kalimat yang diinputkan. Algoritma pencarian yang digunakan adalah binary search. Program ini memakai dua library tambahan yaitu "conio.h" dan "iomanip". Library conio.h memungkinkan untuk mengakses fungsi "_getch()" yang menunggu hingga pengguna menekan tombol sebelum keluar dari program. Fungsi "_getch()" berguna untuk menjaga tampilan layar agar tetap terbuka setelah program selesai dijalankan. Sedangkan library iomanip memungkinkan mengakses fungsi "setw()" yang berfungsi untuk mengatur lebar kolom saat menampilkan kalimat yang sudah diurutkan. Dengan menggunakan "setw()", program dapat menampilkan setiap karakter dalam kalimat dengan lebar yang konsisten, sehingga tampilannya menjadi lebih rapi dan mudah dibaca. Fungsi yang dideklarasikan yaitu "selection_sort" dan fungsi "binary_search". 
+
+Fungsi selection_sort digunakan untuk mengurutkan kaakter dari kalimat yang diinputkan menurut abjad. Sedangkan fungsi binary_search sendiri untuk mencari karakter tertentu dari kalimat yang diinputkan. Pencarian dilakukan dengan beberapa langkah, yaitu deklarasi fungsi binary_search dengan dua parameter berupa kalimat yang merupakan string yang akan dicari hurufnya, dan huruf yang merupakan huruf yang ingin dicari. Kemudian mendefenisikan dua variabel yaitu "low" dan "high" yang menunjukkan batas awal dan akhir dari rentang pencarian. Pada awalnya, low ditetapkan sebagai indeks pertama kalimat (0) dan high ditetapkan sebagai indeks terakhir kalimat. dilanjutkan dengan inisialisasi dua variabel, "found" yang merupakan flag untuk menunjukkan apakah huruf sudah ditemukan atau tidak, dan "firstIndex" untuk menyimpan indeks pertama kali huruf ditemukan. Pada awalnya, kedua variabel ini diinisialisasi dengan nilai yang menandakan bahwa huruf belum ditemukan. Terdapat perulangan "while" yang akan terus berjalan selama low tidak melebihi high dan huruf belum ditemukan. Karena menggunakan bianry search, program akan menghitung indeks tengah dari rentang pencarian. Pada blok if, else if, dan else, dilakukan perbandingan antara huruf yang dicari dengan huruf pada indeks tengah (mid) dari kalimat:
+
+    * Jika huruf yang dicari sama dengan huruf pada indeks tengah, maka huruf tersebut ditemukan. Variabel found diset menjadi true dan indeksnya disimpan di firstIndex.
+
+    * Jika huruf yang dicari lebih besar dari huruf pada indeks tengah, maka rentang pencarian dipindahkan ke bagian kanan (low = mid + 1).
+
+    * Jika huruf yang dicari lebih kecil dari huruf pada indeks tengah, maka rentang pencarian dipindahkan ke bagian kiri (high = mid - 1).
+
+Setelah perulangan selesai dan huruf tidak ditemukan (!found), maka pesan "Huruf tidak ditemukan" akan ditampilkan. Jika huruf ditemukan (found) dan firstIndex tidak sama dengan -1 (artinya huruf ditemukan lebih dari satu kali), maka dilakukan perulangan untuk menampilkan indeks-indeks lain dimana huruf tersebut ditemukan selain indeks pertama kali ditemukan.
+Progam menampilkan indeks dimulai dari indeks 1.
+
+
 #### Output:
 
-![Screenshot 2024-03-11 103018](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/deb90ae6-0336-487b-b11e-ef1dab4eae23)
+![Screenshot 2024-04-07 174126](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/9a05ac2b-7652-45ff-abd9-ee52d3df424a)
 
 
 #### Full screenshot 
 
-![Screenshot 2024-03-11 103207](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/517bd842-4108-4e96-99ac-6de4aa9c7e19)
+![Screenshot 2024-04-07 180705](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/f53cbe1c-4389-41ad-8b9c-29696b6627a5)
 
+### 2. Buatlah sebuah program yang dapat menghitung banyaknya huruf vocal dalam sebuah kalimat
 
-#### Kesimpulan
-
-Tipe data primitif merupakan tipe data yang paling mendasar. Sekaligus menjadi tipe data yang penting dalam setipa pemrograman yang dibuat. Tipe data primitif seperti int, char, float terus digunakan dalam tipe-tipe data lainnya.
-
-### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
-Secara umum kedua fungsi ini dapat digunakan untuk menyimpan data. Namun, kedua fungsi ini memiliki perbedaan spesifik. Class adalah sebuah template untuk membuat objek dengan karakteristik dan kemampuan yang sama. Class memiliki anggota (member) yang terdiri dari variabel (data) dan fungsi (method). Class dapat mewarisi (inheritance) sifat dan kemampuan dari class lain. Class dapat diakses dengan public, private, dan protected access specifier untuk mengatur visibilitas anggota class. Sedangkan struct secara default memiliki public access specifier untuk semua anggotanya. Struct tidak mendukung inheritance. Struct umumnya digunakan untuk membuat struktur data sederhana.
-
-#### Contoh Program
 ```C++
 #include <iostream>
+#include <string>
 #include <vector>
 
 using namespace std;
 
-// Struct untuk menyimpan data alamat
-struct Alamat {
-  string Jalan;
-  string Kecamatan;
-  string Kabupaten;
-};
-
-// Class untuk menyimpan data siswa
-class Student {
-public:
-  string name;
-  Alamat alamat; // Menggunakan struct Alamat
-  vector<int> nilai; // Vektor untuk menyimpan nilai
-
-  // Fungsi untuk menghitung rata-rata nilai
-  double calculateAverage() {
-    double total = 0;
-    for (int grade : nilai) {
-      total += grade;
-    }
-    return total / nilai.size();
-  }
-};
-
 int main() {
-  // Deklarasi objek Student
-  Student siswa1;
+  // Deklarasi variabel
+  string kalimat;
+  int jumlah_vokal = 0;
+  vector<char> huruf_vokal;
 
-  // Mengisi data siswa
-  siswa1.name = "Avny";
-  siswa1.alamat.Jalan = "Jalan Komak";
-  siswa1.alamat.Kecamatan = "Nubatukan";
-  siswa1.alamat.Kabupaten = "Lembata";
-  siswa1.nilai.push_back(87);
-  siswa1.nilai.push_back(93);
-  siswa1.nilai.push_back(85);
+  // Meminta input kalimat
+  cout << "Masukkan kalimat: ";
+  getline(cin, kalimat);
 
-  // Menampilkan data siswa
-  cout << "Nama: " << siswa1.name << endl;
-  cout << "Alamat: " << siswa1.alamat.Jalan << ", " << siswa1.alamat.Kecamatan << ", " << siswa1.alamat.Kabupaten << endl;
+  // Mengubah semua huruf menjadi huruf kecil
+  for (int i = 0; i < kalimat.length(); i++) {
+    kalimat[i] = tolower(kalimat[i]);
+  }
 
-  // Menampilkan rata-rata nilai
-  double average = siswa1.calculateAverage();
-  cout << "Rata-rata nilai: " << average << endl;
+  // Mencari jumlah huruf vokal dan menyimpan huruf vokal yang ditemukan
+  for (int i = 0; i < kalimat.length(); i++) {
+    if (kalimat[i] == 'a' || kalimat[i] == 'i' || kalimat[i] == 'u' || kalimat[i] == 'e' || kalimat[i] == 'o') {
+      jumlah_vokal++;
+      huruf_vokal.push_back(kalimat[i]);
+    }
+  }
+
+  // Menampilkan hasil
+  cout << "Jumlah huruf vokal dalam kalimat: " << jumlah_vokal << endl;
+  cout << "Huruf vokal yang ditemukan: ";
+  for (char vokal : huruf_vokal) {
+    cout << vokal << " ";
+  }
+  cout << endl;
 
   return 0;
 }
+
 ```
 
-Kode diatas merupakan contoh program yang menggunakan fungsi class dan struct sekaligus. Program tersebut bertujuan menampilkan data siswa dan juga menghitung nilai dari siswa tersebut. Fungsi struct di program ini berupa struct Alamat yang digunakan untuk menyimpan data alamat siswa. Sedangkan class yang digunakan adalah class student. Class Student menyimpan data nama siswa, alamat, dan nilai. Program ini juga memiliki fungsi calculateAverage() untuk menghitung rata-rata nilai. Main function program ini berupa deklarasi objek Student bernama siswa1. Mengisi data siswa dengan nama, alamat (menggunakan struct Alamat), dan nilai. Menampilkan data siswa dan memanggil fungsi calculateAverage() untuk menampilkan rata-rata nilai.
+Program di atas dapat menghitung jumlah huruf vokal dan menampilkan huruf vokal yang dimaksud berdasarkan kalimat inputan dari user. Algoritma pencarian yang digunakan adalah sequntial search. Program ini memakai dua library tambahan yaitu "string" dan "vector". Library string sendiri memberikan berbagai fungsi dan fitur yang memungkinkan untuk bekerja dengan strin. Dalam program tersebut, library string digunakan untuk mendeklarasikan variabel "kalimat" sebagai tipe data string, dan juga digunakan untuk mengakses fungsi "length()" yang memberikan panjang string, serta fungsi "tolower()" yang digunakan untuk mengubah huruf-huruf dalam kalimat menjadi huruf kecil. Program mengubah huruf menjadi huruf kecil agar menghilangkan sensitivitas program terhadap huruf kapital pada kalimat yang diinput. Sedangakan library vector pada program ini digunakan untuk menyimpan huruf vokal yang ditemukan dalam kalimat. Penggunaan vector memungkinkan untuk menyimpan dan mengakses elemen-elemen dengan mudah, serta mengelola memori secara dinamis tanpa perlu khawatir tentang alokasi memori secara manual. 
+
+Program juga menggunakan fungsi "getline()" untuk membaca seluruh baris dari input pengguna dan menyimpannya ke dalam variabel kalimat. Terdapat perulangan for untuk mengiterasi setiap karakter dalam kalimat. Pemeriksaan apakah karakter tersebut adalah huruf vokal atau bukan dilakukan melalui kode program pada baris ke-24 yaitu "if (kalimat[i] == 'a' || kalimat[i] == 'i' || kalimat[i] == 'u' || kalimat[i] == 'e' || kalimat[i] == 'o')". Jika karakter saat ini adalah huruf vokal, maka jumlah vokal akan bertambah satu dan dimasukkan ke dalam vector "huruf_vokal". Di akhir, program akan menampilkan kalimat yang diinput, jumlah huruf vokal dalam kalimat, dan apa saja huruf vokal yang ditemukan.
+
 #### Output:
 
-![Screenshot 2024-03-11 112836](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/941e48f2-d3ab-4991-b1a2-04398b40b15d)
+![Screenshot 2024-04-08 042802](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/ae8fb629-e21d-4ccb-a7ef-7735cdf32951)
 
 #### Full Screenshot
 
-![Screenshot 2024-03-11 112933](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/a9fbcbc1-0e51-4d69-92b7-aba51271bc70)
+![Screenshot 2024-04-08 042825](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/f088bfeb-d2cd-4e3c-a84b-537fb2fefe53)
 
 
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
+### 3. Diketahui data = 9, 4, 1, 4, 7, 10, 5, 4, 12, 4. Hitunglah berapa banyak angka 4 dengan menggunakan algoritma Sequential Search!
 
 ```C++
 #include <iostream>
-#include <map>
 
 using namespace std;
 
 int main() {
-  // Deklarasi map untuk menyimpan data tinggi badan
-  map<string, int> tinggiBadan;
+  // Deklarasi variabel
+  int data[] = {9, 4, 1, 4, 7, 10, 5, 4, 12, 4};
+  int n = sizeof(data) / sizeof(data[0]);
+  int jumlah_angka_4 = 0;
 
-  // Menambahkan data ke map
-  tinggiBadan["Woozie"] = 166;
-  tinggiBadan["Mingyu"] = 187;
-  tinggiBadan["The8"] = 178;
-
-  // Menghitung total tinggi badan
-  int totalTinggi = 0;
-  for (auto it = tinggiBadan.begin(); it != tinggiBadan.end(); ++it) {
-    totalTinggi += it->second;
+  // Mencari jumlah angka 4 dengan Sequential Search
+  for (int i = 0; i < n; i++) {
+    if (data[i] == 4) {
+      jumlah_angka_4++;
+    }
   }
 
-  // Menghitung rata-rata tinggi badan
-  double rataRata = (double)totalTinggi / tinggiBadan.size();
-
   // Menampilkan hasil
-  cout << "Rata-rata tinggi badan : " << rataRata << endl;
+  cout << "Jumlah angka 4 dalam data: " << jumlah_angka_4 << endl;
 
   return 0;
 }
 
-
 ```
 
 
-Kode di atas merupakan salah satu contoh program yang menggunakan fungsi map. Map dideklarasikan dengan map<string, int>. Ini digunakan untuk menyimpan data tinggi badan dengan key (nama) bertipe string dan value (nilai) bertipe int.
-Data ditambahkan ke map dengan menggunakan key dan value. Kemudian dilakukan untuk iterasi seluruh data di map dan menambahkan nilai ke totalTinggi. Rata-rata tinggi badan dihitung dengan membagi totalTinggi dengan jumlah data di map (tinggiBadan.size()). Rata-rata nilai ditampilkan ke layar. Pada program ini mengunakan fungsi double dengan tujuan untuk mendapatkan nilai rata-rata yang akurat, totalTinggi diubah menjadi double sebelum dibagi dengan tinggiBadan.size(). Tipe data double dapat menyimpan nilai floating-point, yang memungkinkan hasil pembagian lebih akurat.
-#### Output:
+Program ini dapat mencari angka 4 dari data yang sudah ada di dalam array sebelumnya dengan menggunakan sequential search. Program menggunakan array "data" untuk menyimpan data yang akan dicari. Variabel n digunakan untuk menyimpan jumlah elemen dalam array "data". Variabel "jumlah_angka_4" digunakan untuk menghitung berapa banyak angka 4 yang ditemukan. Perulangan for digunakan untuk iterasi setiap elemen dalam array data. Di dalam perulangan, program ini memeriksa apakah elemen saat ini sama dengan 4. Jika ya, maka variabel jumlah_angka_4 akan diincrement. Akhirnya, program ini menampilkan jumlah angka 4 yang ditemukan.
 
-![Screenshot 2024-03-11 105232](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/67f11a46-0dd9-4298-9f5b-a7f15dcaae3e)
+
+#### Output:
+![Screenshot 2024-04-08 084518](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/852d1c53-a701-4f10-af65-fab7e3bc9498)
 
 #### Full Screenshot
 
-![Screenshot 2024-03-11 110017](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/69121829-0b5a-48c6-ac10-c4b96a232ed7)
-
-
- #### Perbedaan Array dan Map
-
-Perbedaan antara map dan array dapat dilihat dari urutan data, Pada array data diurutkan berdasarkan indeks sedangkan pada map data tidak diurutkan. Akses data pada array berupa indeks sedangkan map berupa key. Tipe data pada array bertipe sama sedangkan map dapat memuat beragam tipe. Pada array diizinkan duplikasi data, sedangkan pada map karena karakteristik key unik sehingga tidak dapat menduplikasi data. Perbedaan terakhir berupa kecepatan operasi. Array cepat untuk operasi akses dan modifikasi data sedangkan map lebih lambat untuk operasi akses dan modifikasi data.
+![Screenshot 2024-04-08 084507](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/d87b29ff-8156-4d6e-a9c6-b0ca77f68bbc)
 
 
 ## Kesimpulan
 
-Tipe data terdiri dari berbagai macam yang kemudian digunakan sesuai kebutuhan pembuatan program. Pemahaman akan tipe-tipe data diperlukan sebagai dasar pemrograman. Pemahaman yang baik akan menciptakan dan meningkatkan kemampuan mahasiswa untuk mengenali dan membedakan tipe-tipe data sehingga mahasiswa dapat memilih tipe data yang tepat sesuai kebutuhan. Dengan adanya praktikum terkait tipe data juga membantu mahasiswa untuk meningkatkan keefetifan program yang dibuat.
+Algoritma pencarian terdiri dari binary search dan sequential search. Pemakaian kedua jenis ini disesuaikan dengan kebutuhan program, kompleksitas waktu dan ruang, serta kondisi yang ingin dibuat. Praktikum secara langsung terkait materi ini memudahkan dalam memahami materi. Tidak hanya struktur dasar dan bagaimana kedua jenis algoritma ini bekerja, melalui praktikum diketahui bagaimana menggunakan jenis algoritma pencarian yang tepat sesuai program yang ingin dibuat.
  
 
 ## Referensi
 
-[1] Hendy, K., & Istiono, W. (2020). Efficiency Analysis of Binary Search and Quadratic Search in Big and Small Data Computational Science and Techniques, 7, 605–615. https://doi.org/10.15181/csat.v7i1.2091
-[3] Darmawantoro, R. Y., Utami, Y. R. W., & Kustanto, 
-K. (2022). Implementasi Binary Search Untuk 
-Data Obat di Apotek. Jurnal Teknologi 
-Informasi Dan Komunikasi (TIKomSiN), 
-10(1).
-https://doi.org/10.30646/tikomsin.v10i1.607
+[1] Hendy, K., & Istiono, "Efficiency Analysis of Binary Search and Quadratic Search in Big and Small Data". Computational Science and Techniques, 7, 605–615. 2020.
+
+[2] Wafiqah S. W, Septi A, Ben R, "Penggunaan Algoritma Sequential Searching Pada Aplikasi Perpustakaan Berbasis Web". Jurnal Ilmiah Penelitian dan Pembelajaran Informatika, 7, 2. 2022.
+
+[3] Darmawantoro, R. Y., Utami, Y. R. W., & Kustanto, "Implementasi Binary Search Untuk Data Obat di Apotek". Jurnal Teknologi Informasi Dan Komunikasi (TIKomSiN), 10(1). 2022.
+
+[4] Bernad J. D. S, Ade Y, Nancy J. R. "Implementasi Algoritma Binary Searching Pada Pencarian Data Jemaat Gereja HKBP Manado". Jurnal Informatika Polinema, 9. 2022.
