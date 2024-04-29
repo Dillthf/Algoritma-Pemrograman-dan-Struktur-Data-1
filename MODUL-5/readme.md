@@ -6,6 +6,7 @@
 ## Dasar Teori
 A. Variabel
 Berdasarkan ruang lingkupnya, variabel dibedakan menjadi dua, yaitu variabel lokal dan variabel global. Penentuan variabel sebagai variabel global atau lokal akan tergantung dari penempatannya di dalam program. Variabel lokal hanya dapat digunakan di dalam blok fungsi di mana variabel tersebut dideklarasikan. Sedakan variabel global didefinisikan di luar blok atau fungsi sehingga dapat digunakan pada blok fungsi manapun [1].
+
 B. Struct
 Struktur adalah kumpulan item data (bidang) atau variabel dari tipe data berbeda yang direferensikan dengan nama yang sama. Ini menyediakan cara yang mudah untuk menyimpan informasi terkait bersama-sama. Kata kunci struct memberi tahu kompiler bahwa templat struktur sedang ditentukan, yang dapat digunakan untuk membuat variabel struktur. Bidang-bidang yang membentuk struktur disebut anggota atau elemen struktur. Semua elemen dalam suatu struktur secara logis berhubungan satu sama lain [2].
 
