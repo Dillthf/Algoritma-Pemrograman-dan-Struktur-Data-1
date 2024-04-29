@@ -1093,4 +1093,5 @@ Linked list merupakan struktur data yang terdiri dari node-node yang saling terh
 ## Referensi
 
 [1] G. Williams, H. Williams, A Survey of recent Advances in Linked List Research. ACM Digital Library, 2019. doi:DOI 10.1145/3379748.3379795
+
 [2] C. Brown, D. Brown, Linked List-Based Data Structures for Efficient Graph Representation. Springer Link, 2021. doi: DOI 10.1007/s10444-021-10524-8 
