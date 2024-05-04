@@ -6,8 +6,7 @@
 ## Dasar Teori
 A. Pengertian
 
-Stack merupakan sebuah tumpukan dengan 
-metode LIFO (Last In First Out), yaitu data terakhir yang masuk ke dalam tumpukan merupakan data pertama yang akan dikeluarkan [1].
+Stack merupakan sebuah tumpukan dengan metode LIFO (Last In First Out), yaitu data terakhir yang masuk ke dalam tumpukan merupakan data pertama yang akan dikeluarkan [1].
 
 Stack C++ mendukung operasi dasar berikut:
 
