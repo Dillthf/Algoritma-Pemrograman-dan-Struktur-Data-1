@@ -109,14 +109,15 @@ int main() {
 }
 ```
 
-Program ini dibuat untuk mengelola buku. Program ini mengelola data buku tersebut menggunakan fungsi-fungsi seperti memeriksa apakah stack kosong atau tidak. Menambahkan data baru ke dalam stack, menghapus data dari stack, mengubah posisi tertentu, dan menampilkan data buku tersebut.
+Program ini dibuat untuk membuat antrian dengan struktur data queue. Program tersebut memiliki berbagai fungsi. Didefinisikan konstanta maksimalQueue yang menentukan jumlah maksimal elemen dalam antrian. Terdapat dua variabel global front dan back yang menunjukkan posisi depan dan belakang antrian. Fungsi isfull() dan isEmpty() digunakan untuk memeriksa apakah antrian penuh atau kosong. Fungsi enqueueAntrian(string data) digunakan untuk menambahkan elemen ke dalam antrian. Fungsi dequeueAntrian() digunakan untuk menghapus elemen dari antrian. Fungsi countQueue() mengembalikan jumlah elemen dalam antrian. Fungsi clearQueue() mengosongkan seluruh elemen dalam antrian. Fungsi viewQueue() digunakan untuk menampilkan isi dari antrian. Di dalam fungsi main(), beberapa operasi seperti menambahkan, menghapus, menghitung jumlah, dan mengosongkan antrian dilakukan untuk menguji fungsionalitas program.
 
 ### Output
 ![Screenshot 2024-05-13 101204](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/057076b9-c5d4-40cc-9fff-870dadd49e5a)
 
 ## Unguided 
 
-### 1. Buatlah program untuk menentukan apakah kalimat tersebut yang diinputkan dalam program stack adalah palindrom/tidak. Palindrom kalimat yang dibaca dari depan dan belakang sama. Jelaskan bagaimana cara kerja programnya.
+### 1. Ubahlah penerapan konsep queue pada bagian guided dari array menjadi
+linked list.
 
 
 #### Kode program 
@@ -209,9 +210,7 @@ int main() {
 }
 
 ```
-Program ini dibuat untuk memeriksa apakah kalimat yang dimasukkan oleh pengguna terasuk palindrom atau bukan. Cara kerja program ini dengan membuat sebuah stack yang diberi nama kalimat. Kalimat yang dimasukkan oleh pengguna (bertipe data string) dimasukkan ke dalam stack kalimat. Karena program ini menggunakan stack, maka tumpukkan karakter yang diambil pertama adalah karakter yang terakhir masuk ke dalam stack. Jika kalimat yang dimasukkan adalah palindrom, maka karakter awal dan akhirnya akan dibaca sama. Sehingga kalimat yang dimasukkan pengguna diambil secara terbalik dari stack.
-
-
+Program dibuat dengan maksud yang sama seperti program pada Guided 1. Namun penggunaan array diganti dengan linked list. Pada bagian baris-baris awal kode program, didefinisikan sebuah struktur Node yang memiliki dua anggota, yaitu data yang menyimpan informasi dari elemen antrian dan next yang merupakan pointer ke node selanjutnya dalam linked list. Bagian kedua mendefinisikan kelas Queue yang mengimplementasikan antrian. Beberapa atribut yang dimilikinya adalah front yang merupakan pointer ke node pertama dalam antrian, rear yang merupakan pointer ke node terakhir dalam antrian, dan size yang menyimpan jumlah elemen dalam antrian. Beberapa fungsi yang dipakai dalam program adalah enqueue(), yang digunakan untuk menambahkan elemen baru ke dalam antrian. Sebuah node baru dibuat, diisi dengan data yang diberikan, dan ditambahkan ke belakang antrian. Jika antrian kosong, maka front dan rear diatur ke node baru tersebut. Fungsi berikutnya, dequeue() digunakan untuk menghapus elemen pertama dari antrian. Node pertama dihapus dan front diupdate ke node berikutnya dalam antrian. clearQueue() digunakan untuk mengosongkan seluruh elemen dalam antrian dengan menghapus satu per satu menggunakan method dequeue(). Dan, viewQueue() digunakan untuk menampilkan isi dari antrian. Ini dilakukan dengan melakukan iterasi melalui seluruh node dalam antrian dan menampilkan datanya. Jika antrian kosong, maka akan ditampilkan "(kosong)". Program ini memiliki main fungsi (main()), sebuah objek queue dari kelas Queue dibuat. Kemudian, beberapa operasi seperti penambahan, penghapusan, penghitungan jumlah, dan pengosongan antrian dilakukan untuk menguji fungsionalitas program. Setelah setiap operasi, isi antrian ditampilkan beserta jumlah elemennya.
 
 ###### Output 
 
@@ -221,7 +220,8 @@ Program ini dibuat untuk memeriksa apakah kalimat yang dimasukkan oleh pengguna 
 
 ![Screenshot 2024-05-13 101331](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/35aaf087-66fd-4355-9753-fab135aef973)
 
-### 2. Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?
+### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM
+Mahasiswa
 
 #### Kode Program
 
@@ -321,12 +321,10 @@ int main() {
 
 
 ```
-Program ini dibuat untuk membalikkan kalimat. Cara kerja program ini adalah saat pengguna memasukkan kalimat, kalimat tersebut menggunakan stack "terbalikKalimat". Kalimat akan dibaca perkaraker, jika karakter yang dibaca berupa spasi, maka program akan membalik kata yang sudah terbaca sebelumnya. Spasi juga ditambahkan untuk memisahkan kata dalam kalimat. Jika bukan spasi, maka karakter tersebut dimasukkan ke dalam stack. Setelah selesai, program akan menampilkan kalimat asli yang dimasukkan pengguna dan kalimat yang telah dibalik.
+Program ini hanya diubah pada bagian isi antrian dengan menggunakan nama dan nim mahasiswa. Sehingga isi barisan kode awal ini berupa mendefinisikan sebuah struktur Mahasiswa yang memiliki dua anggota, yaitu nama untuk menyimpan nama mahasiswa dan nim untuk menyimpan nomor induk mahasiswa. Kemudian pada barisan berikutnya mendefinisikan sebuah struktur Node yang memiliki dua anggota, yaitu data yang merupakan objek dari struktur Mahasiswa untuk menyimpan data mahasiswa, dan next yang merupakan pointer ke node selanjutnya dalam linked list. Selanjutnya, didefinisikan kelas Queue yang mengimplementasikan antrian. Beberapa atribut yang dimilikinya adalah front yang merupakan pointer ke node pertama dalam antrian, rear yang merupakan pointer ke node terakhir dalam antrian, dan size yang menyimpan jumlah elemen dalam antrian. Fungsi-fungsi yang digunakan juga sama seperti program pada unguided 1. Yaitu fungsi isEmpty() digunakan untuk memeriksa apakah antrian kosong. Ini dilakukan dengan memeriksa apakah size sama dengan 0. Kemudian, enqueue(string nama, string nim) digunakan untuk menambahkan data mahasiswa baru ke dalam antrian. Sebuah node baru dibuat, diisi dengan data nama dan nim yang diberikan, dan ditambahkan ke belakang antrian. Jika antrian kosong, maka front dan rear diatur ke node baru tersebut. Fungsi dequeue() digunakan untuk menghapus elemen pertama dari antrian. Node pertama dihapus dan front diupdate ke node berikutnya dalam antrian. Selanjutnya, countQueue() digunakan untuk mengembalikan jumlah elemen dalam antrian, yaitu nilai dari atribut size. Fungsi clearQueue() digunakan untuk mengosongkan seluruh elemen dalam antrian dengan menghapus satu per satu menggunakan method dequeue(). Dan, viewQueue() digunakan untuk menampilkan isi dari antrian. Ini dilakukan dengan melakukan iterasi melalui seluruh node dalam antrian dan menampilkan nama dan nim mahasiswa. Jika antrian kosong, maka akan ditampilkan "(kosong)". Program ini memiliki fungsi main atau utama (main()), sebuah objek queue dari kelas Queue dibuat. Kemudian, beberapa operasi seperti penambahan, penghapusan, penghitungan jumlah, dan pengosongan antrian dilakukan untuk menguji fungsionalitas program. Setelah setiap operasi, isi antrian ditampilkan beserta jumlah elemennya. 
 
 ##### Output
 ![Screenshot 2024-05-13 101304](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/f781fcc5-4421-411a-a3d1-36ab45900ebd)
-
-Program ini membalikkan kalimat dengan tidak hanya membalik urutan karakter atau huruf yang terdapat pada kata di dalam kalimat, namun juga membalikkan urutan posisi kata dalam kalimat. Sehingga urutan kata pertama menjadi yang terakhir dan kata terakhir menjadi kata petama. Huruf pertama menjadi huruf terakir dan huruf terakir menjadi huruf pertama, dan seterusnya.
 
 ##### Full Screenshot
 
@@ -335,12 +333,11 @@ Program ini membalikkan kalimat dengan tidak hanya membalik urutan karakter atau
 
 ## Kesimpulan
 
-Stack digunakan dengan metode item yang masuk terakhir akan diakses terlebih dahulu. Stack juga memiliki berbagai operasi seperti pop(), push(), top(), dan operasi lainnya. Stack dapat diaplikasikan pada program yang membutuhkan pengolahan data, penyimpanan, dan lainnya.
+Dari penjelasan materi dan praktikum dapat menyimpulkan bahwa antrian adalah sebuah struktur data yang mengikuti prinsip FIFO (First In First Out), di mana elemen yang pertama kali dimasukkan ke dalam antrian akan keluar pertama kali saat operasi penghapusan dilakukan. Terdapat dua operasi utama dalam antrian, yaitu enqueue untuk memasukkan elemen baru dan dequeue untuk mengeluarkan satu elemen dari antrian. Antrian dapat diimplementasikan menggunakan dua jenis struktur data, yaitu Linear Array dan Circular Array. Prinsip FIFO dalam antrian juga dapat diterapkan dalam situasi sehari-hari, seperti dalam penyelesaian laporan pengaduan, di mana laporan yang masuk pertama kali akan dianggap yang paling penting dan diselesaikan terlebih dahulu. Oleh karena itu, penggunaan antrian sangat berguna dalam menangani proses yang memerlukan prioritas berdasarkan urutan kedatangan
 
 ## Referensi
 
-[1] G. M. Putri, "Implementasi Stack dan Array pada Pengurutan Lagu dengan Metode Selection Sort", JTeksis, vol.6, no.2, 286-296, April 2024.
-doi : https://doi.org/10.47233/jteksis.v6i2.1192
+[1] R. Gunawan, H. Yuana, S. Kirom, Implementasi Metode Queue Pada Sistem Antrian Online Berbasis Web Studi Kasus UPTD Puskesmas Sananwetan. JATI. Vol.7, No. 3. 2023.
 
 [2] Sihombing, Johnson. 2019. Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java. Jurnal Ilmiah Infokom, Hal. 15-24, Vol. 7, No. 2
 
