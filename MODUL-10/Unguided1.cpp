@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 // Fungsi rekursif untuk menghitung faktorial
 int faktorial(int n) {
@@ -11,14 +12,14 @@ int faktorial(int n) {
 
 int main() {
     int num;
-    std::cout << "Masukkan bilangan bulat positif: ";
-    std::cin >> num;
+    cout << "Masukkan bilangan bulat positif: ";
+    cin >> num;
     
     if (num < 0) {
-        std::cout << "Bilangan harus positif." << std::endl;
+        cout << "Bilangan harus positif." << endl;
     } else {
         int hasil = faktorial(num);
-        std::cout << "Faktorial dari " << num << " adalah: " << hasil << std::endl;
+        cout << "Faktorial dari " << num << " adalah: " << hasil << endl;
     }
 
     return 0;
