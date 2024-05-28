@@ -91,6 +91,7 @@ Cara kerja pada program menggunakan rekursif tidak langsung. Ketika functionA(5)
 
 ```C++
 #include <iostream>
+using namespace std;
 
 // Fungsi rekursif untuk menghitung faktorial
 int faktorial(int n) {
@@ -103,22 +104,28 @@ int faktorial(int n) {
 
 int main() {
     int num;
-    std::cout << "Masukkan bilangan bulat positif: ";
-    std::cin >> num;
+    cout << "Masukkan bilangan bulat positif: ";
+    cin >> num;
     
     if (num < 0) {
-        std::cout << "Bilangan harus positif." << std::endl;
+        cout << "Bilangan harus positif." << endl;
     } else {
         int hasil = faktorial(num);
-        std::cout << "Faktorial dari " << num << " adalah: " << hasil << std::endl;
+        cout << "Faktorial dari " << num << " adalah: " << hasil << endl;
     }
 
     return 0;
 }
 
-```
-Program ini dibuat untuk memeriksa apakah kalimat yang dimasukkan oleh pengguna terasuk palindrom atau bukan. Cara kerja program ini dengan membuat sebuah stack yang diberi nama kalimat. Kalimat yang dimasukkan oleh pengguna (bertipe data string) dimasukkan ke dalam stack kalimat. Karena program ini menggunakan stack, maka tumpukkan karakter yang diambil pertama adalah karakter yang terakhir masuk ke dalam stack. Jika kalimat yang dimasukkan adalah palindrom, maka karakter awal dan akhirnya akan dibaca sama. Sehingga kalimat yang dimasukkan pengguna diambil secara terbalik dari stack.
 
+```
+Program dimulai dan meminta pengguna untuk memasukkan bilangan bulat positif.
+Saat pengguna memasukkan bilangan, program mengecek apakah bilangan tersebut positif. Jika bilangan negatif, program mencetak pesan kesalahan dan selesai.
+Jika bilangan positif atau nol, program melanjutkan untuk menghitung faktorial.
+Fungsi faktorial dipanggil secara rekursif untuk menghitung faktorial dari bilangan tersebut.
+Program mendefinisikan fungsi faktorial yang menerima satu argumen integer n. Kemudian membuat kondisi basis dari rekursi. Jika n kurang dari atau sama dengan 1, fungsi mengembalikan nilai 1. Jika n lebih besar dari 1, eksekusi blok berikutnya. Pada baris fungsi return n * faktorial(n - 1) akan mengembalikan hasil perkalian n dengan hasil pemanggilan rekursif faktorial(n - 1). Ini mengurangi nilai n secara berulang hingga mencapai kondisi basis.
+Fungsi utama yang akan dieksekusi saat program dijalankan. Awalnya variabel dideklerasikan sebagai num untuk menyimpan input dari pengguna. Fungsi mencetak pesan untuk inputan pengguna dan membaca input dari pengguna dan menyimpannya ke dalam variabel num.
+Pada fungsi if (num < 0) mengecek apakah nilai num kurang dari 0. Jika num kurang dari 0, fungsi mencetak pesan kesalahan bahwa bilangan harus positif. Jika num tidak kurang dari 0, eksekusi blok berikutnya. Fungsi faktorial akan dipanggil dengan argumen num dan menyimpan hasilnya ke dalam variabel hasil. Diakhir, program mencetak hasil perhitungan faktorial.
 
 
 ###### Output 
@@ -168,12 +175,14 @@ int main() {
 
 
 ```
-Program ini dibuat untuk membalikkan kalimat. Cara kerja program ini adalah saat pengguna memasukkan kalimat, kalimat tersebut menggunakan stack "terbalikKalimat". Kalimat akan dibaca perkaraker, jika karakter yang dibaca berupa spasi, maka program akan membalik kata yang sudah terbaca sebelumnya. Spasi juga ditambahkan untuk memisahkan kata dalam kalimat. Jika bukan spasi, maka karakter tersebut dimasukkan ke dalam stack. Setelah selesai, program akan menampilkan kalimat asli yang dimasukkan pengguna dan kalimat yang telah dibalik.
+Program ini menggunakan rekursi tidak langsung untuk menghitung faktorial dari sebuah bilangan bulat positif yang dimasukkan oleh pengguna. Program dimulai dan meminta pengguna untuk memasukkan bilangan bulat positif. Saat pengguna memasukkan bilangan, program mengecek apakah bilangan tersebut positif. Jika bilangan negatif, program mencetak pesan kesalahan dan selesai. Jika bilangan positif atau nol, program melanjutkan untuk menghitung faktorial. Program mendefinisikan dua fungsi, faktorialA dan faktorialB, yang saling memanggil secara rekursif untuk menghitung faktorial dari bilangan tersebut. FaktorialA menerima satu argumen integer n. Kemudian ,embuat kondisi basis dari rekursi: jika n kurang dari atau sama dengan 1, fungsi mengembalikan nilai 1.
+Jika n lebih besar dari 1, eksekusi blok berikutnya: return n * faktorialB(n - 1).
+Ini mengembalikan hasil perkalian n dengan hasil pemanggilan rekursif faktorialB(n - 1), mengurangi nilai n secara berulang hingga mencapai kondisi basis. FaktorialB juga menerima satu argumen integer n dan memanggil faktorialA(n) secara rekursif.
+Fungsi utama yang akan dieksekusi saat program dijalankan adalah, awalnya, variabel num dideklarasikan untuk menyimpan input dari pengguna.Fungsi mencetak pesan untuk meminta input dari pengguna dan membaca input tersebut, menyimpannya ke dalam variabel num. Pada kondisi if (num < 0), program mengecek apakah nilai num kurang dari 0. Jika num kurang dari 0, fungsi mencetak pesan kesalahan bahwa bilangan harus positif.Jika num tidak kurang dari 0, eksekusi blok berikutnya:
+Fungsi faktorialA dipanggil dengan argumen num dan menyimpan hasilnya ke dalam variabel hasil. Di akhir, program mencetak hasil perhitungan faktorial.
 
 ##### Output
 ![Screenshot 2024-05-04 154817](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/cd08d788-14a5-4ee3-8dba-e4ca4aef1448)
-
-Program ini membalikkan kalimat dengan tidak hanya membalik urutan karakter atau huruf yang terdapat pada kata di dalam kalimat, namun juga membalikkan urutan posisi kata dalam kalimat. Sehingga urutan kata pertama menjadi yang terakhir dan kata terakhir menjadi kata petama. Huruf pertama menjadi huruf terakir dan huruf terakir menjadi huruf pertama, dan seterusnya.
 
 ##### Full Screenshot
 
@@ -182,7 +191,7 @@ Program ini membalikkan kalimat dengan tidak hanya membalik urutan karakter atau
 
 ## Kesimpulan
 
-Stack digunakan dengan metode item yang masuk terakhir akan diakses terlebih dahulu. Stack juga memiliki berbagai operasi seperti pop(), push(), top(), dan operasi lainnya. Stack dapat diaplikasikan pada program yang membutuhkan pengolahan data, penyimpanan, dan lainnya.
+Rekursi adalah metode dalam pemrograman di mana sebuah fungsi memanggil dirinya sendiri secara langsung atau tidak langsung untuk menyelesaikan suatu masalah. Ada dua jenis rekursi: rekursi langsung, di mana fungsi memanggil dirinya sendiri, dan rekursi tidak langsung, di mana fungsi A memanggil fungsi B, yang kemudian memanggil kembali fungsi A. Meskipun rekursi dapat membuat kode lebih sederhana dan bersih, terutama untuk masalah yang secara alami bersifat rekursif seperti Tree Traversal dan Tower of Hanoi, rekursi memiliki beberapa kekurangan. Kekurangan tersebut termasuk kebutuhan memori yang lebih besar dan waktu eksekusi yang lebih lama dibandingkan dengan pendekatan iteratif, karena setiap panggilan fungsi harus disimpan dalam tumpukan hingga mencapai kondisi basis. Meskipun demikian, rekursi tetap menjadi alat yang berguna dalam pemrograman untuk masalah-masalah tertentu yang dapat dipecahkan dengan lebih elegan menggunakan metode ini.
 
 ## Referensi
 
