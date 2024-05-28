@@ -11,7 +11,7 @@
 
 ## Guided 
 
-### Guided 1 (Rekursi Langsung)
+### Guided 1 (Rekursif Langsung)
 
 Source code:
 ```C++
@@ -36,12 +36,12 @@ int main() {
 }
 ```
 
-Program ini dibuat untuk mengelola buku. Program ini mengelola data buku tersebut menggunakan fungsi-fungsi seperti memeriksa apakah stack kosong atau tidak. Menambahkan data baru ke dalam stack, menghapus data dari stack, mengubah posisi tertentu, dan menampilkan data buku tersebut.
+Cara kerja program berupa, ketika fungsi countdown(5) dipanggil, maka akan dicetak 5 dan memanggil fungsi countdown(4) yang akan mencetak 4 dan memanggil countdown(3), begitu seterusnya hingga fungsi countdown(0). Program akan mencapai kondisi basis dan fungsi keluar tanpa mencetak apa-apa.
 
 ### Output
 ![Screenshot 2024-05-04 100525](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/204930f1-9907-47a4-be9f-cb0fab31bba9)
 
-### Guided 2 (Rekursi Tidak Langsung)
+### Guided 2 (Rekursif Tidak Langsung)
 
 Source code:
 ```C++
@@ -75,7 +75,7 @@ int main () {
 
 ```
 
-Program ini dibuat untuk mengelola buku. Program ini mengelola data buku tersebut menggunakan fungsi-fungsi seperti memeriksa apakah stack kosong atau tidak. Menambahkan data baru ke dalam stack, menghapus data dari stack, mengubah posisi tertentu, dan menampilkan data buku tersebut.
+Cara kerja pada program menggunakan rekursif tidak langsung. Ketika functionA(5) dipanggil dari fungsi main, angka 5 dicetak, lalu memanggil functionB(4). Saat functionB(4) dipanggil, angka 4 dicetak dan memanggil functionA(2) (4 / 2). Kemudian akan mencetak angka 2 dan memanggil functionB(1). Pada functionB(1) angka 1 dicetak dan memanggil functionA(0) (1 / 2). FunctionA(0) tidak mencetak apa-apa dan keluar dari fungsi.
 
 ### Output
 ![Screenshot 2024-05-04 100525](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/204930f1-9907-47a4-be9f-cb0fab31bba9)
