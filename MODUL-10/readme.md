@@ -39,7 +39,7 @@ int main() {
 Cara kerja program berupa, ketika fungsi countdown(5) dipanggil, maka akan dicetak 5 dan memanggil fungsi countdown(4) yang akan mencetak 4 dan memanggil countdown(3), begitu seterusnya hingga fungsi countdown(0). Program akan mencapai kondisi basis dan fungsi keluar tanpa mencetak apa-apa.
 
 ### Output
-![Screenshot 2024-05-04 100525](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/204930f1-9907-47a4-be9f-cb0fab31bba9)
+![Screenshot 2024-05-28 085552](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/715b011e-1a82-45e2-8686-ca5142112ad0)
 
 ### Guided 2 (Rekursif Tidak Langsung)
 
@@ -78,9 +78,7 @@ int main () {
 Cara kerja pada program menggunakan rekursif tidak langsung. Ketika functionA(5) dipanggil dari fungsi main, angka 5 dicetak, lalu memanggil functionB(4). Saat functionB(4) dipanggil, angka 4 dicetak dan memanggil functionA(2) (4 / 2). Kemudian akan mencetak angka 2 dan memanggil functionB(1). Pada functionB(1) angka 1 dicetak dan memanggil functionA(0) (1 / 2). FunctionA(0) tidak mencetak apa-apa dan keluar dari fungsi.
 
 ### Output
-![Screenshot 2024-05-04 100525](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/204930f1-9907-47a4-be9f-cb0fab31bba9)
-
-
+![Screenshot 2024-05-28 085606](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/0a4c8db0-ece9-46f5-9279-72580053d965)
 
 ## Unguided 
 
@@ -130,11 +128,11 @@ Pada fungsi if (num < 0) mengecek apakah nilai num kurang dari 0. Jika num kuran
 
 ###### Output 
 
-![Screenshot 2024-05-04 155016](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/cadb3cc3-d83c-4257-8b33-9e3d3985cbc6)
+![Screenshot 2024-05-28 074526](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/eee90621-a0f7-47ef-8a4e-e78693791262)
 
 ###### Full screenshot 
 
-![Screenshot 2024-05-04 155033](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/5b7c8e2c-f446-403e-bffa-89a8f614874f)
+![Screenshot 2024-05-28 074538](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/ef8dee78-afba-479c-84de-5e4ddd5d7550)
 
 ### 2. Buatlah sebuah program Rekursif Langsung (Direct Recursion) yang menghitung nilai faktorial dari sebuah inputan bilangan bulat positif!
 #### Kode Program
@@ -182,11 +180,11 @@ Fungsi utama yang akan dieksekusi saat program dijalankan adalah, awalnya, varia
 Fungsi faktorialA dipanggil dengan argumen num dan menyimpan hasilnya ke dalam variabel hasil. Di akhir, program mencetak hasil perhitungan faktorial.
 
 ##### Output
-![Screenshot 2024-05-04 154817](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/cd08d788-14a5-4ee3-8dba-e4ca4aef1448)
+![Screenshot 2024-05-28 074606](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/4ade8485-7749-4311-8c81-6d79aa327e21)
 
 ##### Full Screenshot
 
-![Screenshot 2024-05-04 154833](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/6ca41c7f-8f6a-423c-adba-9be1e01a7c8e)
+![Screenshot 2024-05-28 074623](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/79bb5063-bd14-4508-9346-3d3c9c4951c2)
 
 
 ## Kesimpulan
