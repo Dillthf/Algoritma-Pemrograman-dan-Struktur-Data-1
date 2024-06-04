@@ -4,10 +4,8 @@
 <p align="center">SD04-A</p>
 
 ## Dasar Teori
- Ketika suatu fungsi memanggil dirinya sendiri, itu membuat panggilan rekursif. Menurut Sianpar, metode rekursif adalah metode yang secara langsung atau tidak langsung memanggil dirinya sendiri. Kata rekursif berarti "memiliki karakteristik untuk datang kembali, atau mengulangi". Dalam hal ini, pemanggilan fungsi diulangi oleh fungsi itu sendiri. Jenis rekursi ini kadang-kadang disebut rekursi langsung karena fungsinya secara langsung menyebut dirinya. Selain itu, ada jenis rekursi yang kedua yang disebut dengan rekursi tidak langsung. Rekursi tidak langsung terjadi ketika fungsi A memanggil fungsi B, dan fungsi B memanggil kembali ke fungsi A maka itu melibatkan rekursi tidak langsung [1].
-
- Sebuah fungsi rekursif memanggil dirinya sendiri, memori untuk fungsi yang dipanggil dialokasikan di atas memori yang dialokasikan untuk fungsi pemanggil dan salinan variabel lokal yang berbeda dibuat untuk setiap panggilan fungsi. Ketika base case tercapai, fungsi mengembalikan nilainya ke fungsi yang memanggil, dilanjutkan dengan melepaskan memori dan proses ber- lanjut. Kekurangan dari program rekursif adalah memiliki persyaratan ruang yang lebih besar daripada program iteratif karena semua fungsi akan tetap ada di tumpukan hingga base case tercapai. Program rekursif juga memiliki persyaratan waktu yang lebih besar karena pemanggilan fungsi dan pengembalian overhead.
- Sedangkan, kelebihan rekursi menyediakan cara yang bersih dan sederhana dalam penulisan kode program. Beberapa masalah secara inheren bersifat rekursif seperti Tree Traversal, Tower of Hanoi, dan lain-lain [1]. 
+ Hash table adalah struktur data yang memfasilitasi proses pencarian nilai kunci. Ini menghilangkan kebutuhan untuk mencari kunci yang cocok secara berurutan dan mengambil nilai yang sesuai. Tabel hash menggunakan fungsi hash untuk mengubah kunci hash menjadi indeks hash, dan menyimpan nilai hash yang sesuai dalam entri array yang indeksnya sesuai dengan indeks hash. Dengan adanya kunci hash, proses pencarian mengubah kunci hash menjadi indeks hash menggunakan fungsi hash, dan langsung mengakses entri array yang sesuai dengan indeks hash[1]. Struktur tabel hash memiliki properti yang luar biasa: sebagian besar operasinya (diamortisasi, rata-rata, dll.) waktu yang konstan, yaitu kompleksitas teoretisnya adalah O(1) [2].
+ 
 
 ## Guided 
 
@@ -138,7 +136,7 @@ int main() {
 Kode di atas menggunakan array dinamis “table” untuk menyimpan bucket dalam hash table. Setiap bucket diwakili oleh sebuah linked list dengan setiap node merepresentasikan satu item data. Fungsi hash sederhana hanya menggunakan modulus untuk memetakan setiap input kunci ke nilai indeks array.
 
 ### Output
-![Screenshot 2024-05-04 100525](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/204930f1-9907-47a4-be9f-cb0fab31bba9)
+![Screenshot 2024-06-04 085121](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/f91eeaaa-7db2-4d8c-8e8a-0c7fa2524877)
 
 ### Guided 2 
 
@@ -177,7 +175,7 @@ int main () {
 Pada program di atas, class HashNode merepresentasikan setiap node dalam hash table, yang terdiri dari nama dan nomor telepon karyawan. Class HashMap digunakan untuk mengimplementasikan struktur hash table dengan menggunakan vector yang menampung pointer ke HashNode. Fungsi hashFunc digunakan untuk menghitung nilai hash dari nama karyawan yang diberikan, dan fungsi insert digunakan untuk menambahkan data baru ke dalam hash table. Fungsi remove digunakan untuk menghapus data dari hash table, dan fungsi searchByName digunakan untuk mencari nomor telepon dari karyawan dengan nama yang diberikan.
 
 ### Output
-![Screenshot 2024-05-04 100525](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/204930f1-9907-47a4-be9f-cb0fab31bba9)
+![Screenshot 2024-06-04 081718](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/6031fe3d-5539-46ea-82b3-8528be849be2)
 
 
 
@@ -356,16 +354,20 @@ Kode program menggunakan hash table untuk menyimpan data mahasiswa berdasarkan N
 
 ###### Output 
 
-![Screenshot 2024-05-04 155016](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/cadb3cc3-d83c-4257-8b33-9e3d3985cbc6)
+![Screenshot 2024-06-04 081732](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/0bc2d1f3-dbdc-43f7-a0f1-fac49d0ae83d)
+![Screenshot 2024-06-04 082308](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/68f1a6e2-1738-4508-bb5f-76e57c9d82ca)
+![Screenshot 2024-06-04 083304](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/bfe25122-c86e-448a-9f3d-141295fee603)
 
 ###### Full screenshot 
 
-![Screenshot 2024-05-04 155033](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/5b7c8e2c-f446-403e-bffa-89a8f614874f)
+![Screenshot 2024-06-04 085055](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/32fd22a5-2f7f-4cdc-8eb8-e8d816d0fe94)
 
 ## Kesimpulan
 
-Stack digunakan dengan metode item yang masuk terakhir akan diakses terlebih dahulu. Stack juga memiliki berbagai operasi seperti pop(), push(), top(), dan operasi lainnya. Stack dapat diaplikasikan pada program yang membutuhkan pengolahan data, penyimpanan, dan lainnya.
+Hash table menawarkan solusi efisien untuk operasi pencarian dan manajemen data melalui penggunaan fungsi hash. Dengan kompleksitas waktu rata-rata yang konstan untuk berbagai operasi, hash table memungkinkan pengelolaan data yang cepat dan efektif, menjadikannya pilihan yang unggul untuk banyak aplikasi komputasi yang memerlukan akses data yang cepat dan terstruktur.
 
 ## Referensi
 
-[1] Shofwan H., Wayan J. Konsep Algoritme dan Aplikasinya dalam Bahasa Pemrograman C++. Edisi I. Yogyakarta:Andi. 2020.
+[1] Issariyakul, T., Hossain, E.Introduction to Network Simulator NS2. Jerman: Springr US. 2008.
+[2] Santiago T. "Key Concepts, Weakness and Benchmark on Hash Table Data Structures" .(n.p). 2022
+
