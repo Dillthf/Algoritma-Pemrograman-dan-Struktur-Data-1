@@ -136,7 +136,8 @@ int main() {
 Kode di atas menggunakan array dinamis “table” untuk menyimpan bucket dalam hash table. Setiap bucket diwakili oleh sebuah linked list dengan setiap node merepresentasikan satu item data. Fungsi hash sederhana hanya menggunakan modulus untuk memetakan setiap input kunci ke nilai indeks array.
 
 ### Output
-![Screenshot 2024-06-04 085121](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/f91eeaaa-7db2-4d8c-8e8a-0c7fa2524877)
+![Screenshot 2024-06-04 085055](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/32fd22a5-2f7f-4cdc-8eb8-e8d816d0fe94)
+
 
 ### Guided 2 
 
@@ -175,7 +176,8 @@ int main () {
 Pada program di atas, class HashNode merepresentasikan setiap node dalam hash table, yang terdiri dari nama dan nomor telepon karyawan. Class HashMap digunakan untuk mengimplementasikan struktur hash table dengan menggunakan vector yang menampung pointer ke HashNode. Fungsi hashFunc digunakan untuk menghitung nilai hash dari nama karyawan yang diberikan, dan fungsi insert digunakan untuk menambahkan data baru ke dalam hash table. Fungsi remove digunakan untuk menghapus data dari hash table, dan fungsi searchByName digunakan untuk mencari nomor telepon dari karyawan dengan nama yang diberikan.
 
 ### Output
-![Screenshot 2024-06-04 081718](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/6031fe3d-5539-46ea-82b3-8528be849be2)
+![Screenshot 2024-06-04 085121](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/f91eeaaa-7db2-4d8c-8e8a-0c7fa2524877)
+
 
 
 
@@ -355,12 +357,14 @@ Kode program menggunakan hash table untuk menyimpan data mahasiswa berdasarkan N
 ###### Output 
 
 ![Screenshot 2024-06-04 081732](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/0bc2d1f3-dbdc-43f7-a0f1-fac49d0ae83d)
+
 ![Screenshot 2024-06-04 082308](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/68f1a6e2-1738-4508-bb5f-76e57c9d82ca)
-![Screenshot 2024-06-04 083304](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/bfe25122-c86e-448a-9f3d-141295fee603)
+
+![Screenshot 2024-06-04 081718](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/6031fe3d-5539-46ea-82b3-8528be849be2)
 
 ###### Full screenshot 
 
-![Screenshot 2024-06-04 085055](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/32fd22a5-2f7f-4cdc-8eb8-e8d816d0fe94)
+![Screenshot 2024-06-04 083304](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/bfe25122-c86e-448a-9f3d-141295fee603)
 
 ## Kesimpulan
 
