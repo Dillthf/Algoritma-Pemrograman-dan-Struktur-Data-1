@@ -11,7 +11,7 @@
 
 ## Guided 
 
-### Guided 1 (Rekursi Langsung)
+### Guided 1 
 
 Source code:
 ```C++
@@ -140,7 +140,7 @@ Kode di atas menggunakan array dinamis “table” untuk menyimpan bucket dalam 
 ### Output
 ![Screenshot 2024-05-04 100525](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/204930f1-9907-47a4-be9f-cb0fab31bba9)
 
-### Guided 2 (Rekursi Tidak Langsung)
+### Guided 2 
 
 Source code:
 ```C++
