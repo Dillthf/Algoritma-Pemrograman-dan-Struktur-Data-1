@@ -4,10 +4,60 @@
 <p align="center">SD04-A</p>
 
 ## Dasar Teori
- Ketika suatu fungsi memanggil dirinya sendiri, itu membuat panggilan rekursif. Menurut Sianpar, metode rekursif adalah metode yang secara langsung atau tidak langsung memanggil dirinya sendiri. Kata rekursif berarti "memiliki karakteristik untuk datang kembali, atau mengulangi". Dalam hal ini, pemanggilan fungsi diulangi oleh fungsi itu sendiri. Jenis rekursi ini kadang-kadang disebut rekursi langsung karena fungsinya secara langsung menyebut dirinya. Selain itu, ada jenis rekursi yang kedua yang disebut dengan rekursi tidak langsung. Rekursi tidak langsung terjadi ketika fungsi A memanggil fungsi B, dan fungsi B memanggil kembali ke fungsi A maka itu melibatkan rekursi tidak langsung [1].
+ A. Graf
+Graf adalah kumpulan simpul (nodes) yang dihubungkan satu sama lain melalui sisi/busur (edges) [1]. Suatu graf G terdiri dari dua himpunan yaitu himpunan V (simpul) dan himpunan E (busur). Busur dapat menunjukkan hubungan (relasi) sembarang seperti rute penerbangan, jalan raya, sambungan telepon, ikatan kimia, dan lain-lain. Notasi graf: G (V, E) artinya graf G memiliki simpul V dan busur E. 
 
- Sebuah fungsi rekursif memanggil dirinya sendiri, memori untuk fungsi yang dipanggil dialokasikan di atas memori yang dialokasikan untuk fungsi pemanggil dan salinan variabel lokal yang berbeda dibuat untuk setiap panggilan fungsi. Ketika base case tercapai, fungsi mengembalikan nilainya ke fungsi yang memanggil, dilanjutkan dengan melepaskan memori dan proses ber- lanjut. Kekurangan dari program rekursif adalah memiliki persyaratan ruang yang lebih besar daripada program iteratif karena semua fungsi akan tetap ada di tumpukan hingga base case tercapai. Program rekursif juga memiliki persyaratan waktu yang lebih besar karena pemanggilan fungsi dan pengembalian overhead.
- Sedangkan, kelebihan rekursi menyediakan cara yang bersih dan sederhana dalam penulisan kode program. Beberapa masalah secara inheren bersifat rekursif seperti Tree Traversal, Tower of Hanoi, dan lain-lain [1]. 
+ Menurut arah dan bobotnya, graf dibagi menjadi empat bagian, yaitu [2]: 
+    a. Graf berarah dan berbobot: tiap busur mempunyai anak panah dan bobot. 
+    b. Graf tidak berarah dan berbobot: tiap busur tidak mempunyai anak panah tetapi mempunyai bobot. 
+    c. Graf berarah dan tidak berbobot: tiap busur mempunyai anak panah yang tidak berbobot. 
+    d. Graf tidak berarah dan tidak berbobot: tiap busur tidak mempunyai anak panah dan tidak berbobot. 
+
+Suatu graf dapat direpresentasikan ke beberapa bentuk. Representasi graf dapat digunakan untuk mengimplementasikan graf tersebut ke dalam bentuk tertentu, sehingga dapat digunakan pada berbagai kasus yang berbeda [3]. Representasi graf yang sering digunakan diantaranya: 
+    a. Matriks Kedekatan (Adjacency Matrix) 
+    Untuk suatu graf dengan jumlah simpul sebanyak n, maka matriks kedekatan mempunyai ukuran n x n (n baris dan n kolom) [1].  
+    (gambar)
+
+    b. Senarai Kedekatan (Adjacency List)
+    Pada simpul x dapat dianggap sebagai suatu senarai yang terdiri dari simpul pada graf yang berdekatan dengan x [1].
+    (gambar)
+
+B. Tree atau Pohon
+Hierarki pada struktur tree dapat diibaratkan seperti sebuah pohon keluarga di mana terdapat hubungan antara orang tua dan anak. Titik yang lebih atas disebut simpul induk sedangkan simpul di bawahnya adalah simpul anak. Struktur data tree terdiri atas kumpulan simpul atau node dimana tiap-tiap simpul dari tree digunakan untuk menyimpan nilai dan sebuah list rujukan ke simpul lain yang disebut simpul anak atau child node [4]. Tiap-tiap simpul dari tree akan dihubungkan oleh sebuah garis hubung yang dalam istilah teknis disebut edge. Biasanya diimplementasikan menggunakan pointer. Simpul pada tree bisa memiliki beberapa simpul anak (child node). Namun, jalan menuju sebuah child node hanya bisa dicapai melalui maksimal 1 node [5]. Apabila sebuah node atau simpul tidak memiliki child node sama sekali maka dinamakan leaf node [4]. Struktur data ini adalah metode khusus untuk mengatur dan menyimpan data di komputer agar dapat digunakan secara lebih efektif.
+
+Layaknya sebuah pohon yang memiliki akar, cabang, dan daun yang terhubung satu sama lain, pada struktur data tree terdapat beberapa istilah penting yang mirip seperti istilah di dunia nyata, antara lain [6]:
+    1. Node
+    Node atau simpul adalah entitas pada struktur data tree yang mengandung sebuah nilai dan pointer yang menunjuk simpul di bawahnya (child node).
+
+    2. Child node   
+    Child node atau simpul anak adalah simpul turunan dari simpul di atasnya.
+
+    3. Leaf Node
+    Leaf node atau simpul daun adalah simpul yang tidak memiliki child node dan merupakan node yang paling bawah dalam struktur data tree. Simpul ini biasa disebut juga sebagai external node
+
+    3. Root
+    Root atau akar adalah simpul teratas dari sebuah tree.
+
+    4. Internal node
+    Internal node adalah istilah untuk menyebut simpul yang memiliki minimal satu child node.
+
+    5. Edge
+    Edge merujuk pada garis yang menghubungkan antara dua buah simpul dalam tree. Jika sebuah tree memiliki N node maka tree tersebut akan memiliki (N-1) edge. Hanya ada satu jalur dari setiap simpul ke simpul lainnya.
+
+    6. Height of node
+    Height of node adalah jumlah edge dari sebuah node ke leaf node yang paling dalam.
+
+    7. Depth of node
+    Depth of node adalah banyaknya edge dari root ke sebuah node.
+
+    8. Height of tree
+    Height of tree dapat diartikan sebagai panjang jalur terpanjang dari simpul akar ke simpul daun dari seuah tree.
+
+    9. Degree of node
+    Jumlah cabang yang melekat pada simpul disebut Degree of node atau derajat simpul. Derajat simpul pada sebuah leaf node adalah 0. Selain Degree of node, terdapat juga Degree of tree yaitu derajat maksimum simpul di antara semua simpul pada tree.
+
+    10. Subtree
+    Subtree adalah setiap simpul dari tree beserta turunannya.
 
 ## Guided 
 
