@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Rekursif</h1>
+# <h1 align="center">Laporan Praktikum Modul Graph and Tree</h1>
 <p align="center">Dill Thafa Jausha</p>
 <p align="center">2311110048</p>
 <p align="center">SD04-A</p>
@@ -7,6 +7,8 @@
  A. Graf
 Graf adalah kumpulan simpul (nodes) yang dihubungkan satu sama lain melalui sisi/busur (edges) [1]. Suatu graf G terdiri dari dua himpunan yaitu himpunan V (simpul) dan himpunan E (busur). Busur dapat menunjukkan hubungan (relasi) sembarang seperti rute penerbangan, jalan raya, sambungan telepon, ikatan kimia, dan lain-lain. Notasi graf: G (V, E) artinya graf G memiliki simpul V dan busur E. 
 
+![Screenshot 2024-06-11 083923](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/b5c2c86c-d951-4202-a95e-f9a14a6da9f2)
+
  Menurut arah dan bobotnya, graf dibagi menjadi empat bagian, yaitu [2]: 
     a. Graf berarah dan berbobot: tiap busur mempunyai anak panah dan bobot. 
     b. Graf tidak berarah dan berbobot: tiap busur tidak mempunyai anak panah tetapi mempunyai bobot. 
@@ -14,18 +16,24 @@ Graf adalah kumpulan simpul (nodes) yang dihubungkan satu sama lain melalui sisi
     d. Graf tidak berarah dan tidak berbobot: tiap busur tidak mempunyai anak panah dan tidak berbobot. 
 
 Suatu graf dapat direpresentasikan ke beberapa bentuk. Representasi graf dapat digunakan untuk mengimplementasikan graf tersebut ke dalam bentuk tertentu, sehingga dapat digunakan pada berbagai kasus yang berbeda [3]. Representasi graf yang sering digunakan diantaranya: 
+
     a. Matriks Kedekatan (Adjacency Matrix) 
     Untuk suatu graf dengan jumlah simpul sebanyak n, maka matriks kedekatan mempunyai ukuran n x n (n baris dan n kolom) [1].  
-    (gambar)
+    
+   ![Screenshot 2024-06-11 085539](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/617b7812-e870-4e25-97dc-13b1bcf20a6b)
 
     b. Senarai Kedekatan (Adjacency List)
     Pada simpul x dapat dianggap sebagai suatu senarai yang terdiri dari simpul pada graf yang berdekatan dengan x [1].
-    (gambar)
+    
+   ![Screenshot 2024-06-11 085630](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/752c9bf3-7239-41d3-a960-b175126cd527)
 
 B. Tree atau Pohon
 Hierarki pada struktur tree dapat diibaratkan seperti sebuah pohon keluarga di mana terdapat hubungan antara orang tua dan anak. Titik yang lebih atas disebut simpul induk sedangkan simpul di bawahnya adalah simpul anak. Struktur data tree terdiri atas kumpulan simpul atau node dimana tiap-tiap simpul dari tree digunakan untuk menyimpan nilai dan sebuah list rujukan ke simpul lain yang disebut simpul anak atau child node [4]. Tiap-tiap simpul dari tree akan dihubungkan oleh sebuah garis hubung yang dalam istilah teknis disebut edge. Biasanya diimplementasikan menggunakan pointer. Simpul pada tree bisa memiliki beberapa simpul anak (child node). Namun, jalan menuju sebuah child node hanya bisa dicapai melalui maksimal 1 node [5]. Apabila sebuah node atau simpul tidak memiliki child node sama sekali maka dinamakan leaf node [4]. Struktur data ini adalah metode khusus untuk mengatur dan menyimpan data di komputer agar dapat digunakan secara lebih efektif.
 
+![Screenshot 2024-06-11 090554](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/faa5964c-d773-4e18-a994-6b1e9a2c5750)
+
 Layaknya sebuah pohon yang memiliki akar, cabang, dan daun yang terhubung satu sama lain, pada struktur data tree terdapat beberapa istilah penting yang mirip seperti istilah di dunia nyata, antara lain [6]:
+
     1. Node
     Node atau simpul adalah entitas pada struktur data tree yang mengandung sebuah nilai dan pointer yang menunjuk simpul di bawahnya (child node).
 
@@ -61,7 +69,7 @@ Layaknya sebuah pohon yang memiliki akar, cabang, dan daun yang terhubung satu s
 
 ## Guided 
 
-### Guided 1 (Rekursi Langsung)
+### Guided 1
 
 Source code:
 ```C++
@@ -102,13 +110,12 @@ int main(){
 }
 
 ```
-
-Program ini dibuat untuk mengelola buku. Program ini mengelola data buku tersebut menggunakan fungsi-fungsi seperti memeriksa apakah stack kosong atau tidak. Menambahkan data baru ke dalam stack, menghapus data dari stack, mengubah posisi tertentu, dan menampilkan data buku tersebut.
+Secara keseluruhan, program ini merepresentasikan graf dengan simpul-simpul dan busur-busur berbobot, lalu menampilkan informasi tersebut dalam format yang terstruktur.
 
 ### Output
-![Screenshot 2024-05-04 100525](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/204930f1-9907-47a4-be9f-cb0fab31bba9)
+![Z(guided1)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/3f64adb2-0965-4be3-ac27-a98782ed1245)
 
-### Guided 2 (Rekursi Tidak Langsung)
+### Guided 2 
 
 Source code:
 ```C++
@@ -210,10 +217,10 @@ int main() {
 
 ```
 
-Program ini dibuat untuk mengelola buku. Program ini mengelola data buku tersebut menggunakan fungsi-fungsi seperti memeriksa apakah stack kosong atau tidak. Menambahkan data baru ke dalam stack, menghapus data dari stack, mengubah posisi tertentu, dan menampilkan data buku tersebut.
+Kode di atas membuat dan mengelola sebuah struktur data tree biner, lalu melakukan tiga jenis traversal (pre-order, in-order, dan post-order) untuk menampilkan isi tree tersebut
 
 ### Output
-![Screenshot 2024-05-04 100525](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/204930f1-9907-47a4-be9f-cb0fab31bba9)
+![Z(guided2)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/3396a5d9-be37-4859-bfe8-cc818b5e4fa9)
 
 
 
@@ -268,17 +275,16 @@ int main() {
     return 0;
 }
 ```
-Program ini dibuat untuk memeriksa apakah kalimat yang dimasukkan oleh pengguna terasuk palindrom atau bukan. Cara kerja program ini dengan membuat sebuah stack yang diberi nama kalimat. Kalimat yang dimasukkan oleh pengguna (bertipe data string) dimasukkan ke dalam stack kalimat. Karena program ini menggunakan stack, maka tumpukkan karakter yang diambil pertama adalah karakter yang terakhir masuk ke dalam stack. Jika kalimat yang dimasukkan adalah palindrom, maka karakter awal dan akhirnya akan dibaca sama. Sehingga kalimat yang dimasukkan pengguna diambil secara terbalik dari stack.
-
+Program ini memungkinkan pengguna untuk memasukkan graf berbobot dengan jumlah simpul yang ditentukan. Program ini meminta pengguna untuk memberikan nama setiap simpul dan bobot (berat) antara setiap pasangan simpul, kemudian menampilkan matriks bobot tersebut. 
+Program akan meminta pengguna untuk memasukkan jumlah simpul  yang akan ada dalam graf dan menyimpannya dalam variabel dill_2311110048. Dengan perulangan, pengguna akan memasukkan nama setiap simpul dan menympannya dalam vektor namaSimpul. Alur berikutnya adalah menggunakan perulangan bersarang untuk meminta pengguna memasukkan bobot untuk setiap pasangan simpul (i, j) dan menyimpannya dalam matriks 2D yang diberi nama horanghae. Di akhir, program menampilkan nama-nama simpul di baris pertama dan dengan perulangan menampilkan setiap baris dari matriks bobot, dengan nama simpul di kolom pertama dan bobot yang sesuai.
 
 
 ###### Output 
-
-![Screenshot 2024-05-04 155016](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/cadb3cc3-d83c-4257-8b33-9e3d3985cbc6)
+![Z(output unguided 1)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/874d4bb1-6da7-4735-bc53-5ec671bcdde0)
 
 ###### Full screenshot 
 
-![Screenshot 2024-05-04 155033](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/5b7c8e2c-f446-403e-bffa-89a8f614874f)
+![Z(fs unguided 2)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/ae0c7e96-10d6-4a88-8c3f-3f1df7b0cc48)
 
 ### 2.	Modifikasi guided tree diatas dengan program menu menggunakan input data tree dari user dan berikan fungsi tambahan untuk menampilkan node child dan descendant dari node yang diinput kan!
 #### Kode Program
@@ -301,36 +307,36 @@ struct TNode {
 };
 
 void preOrder(TNode *node) {
-    if (node!= NULL) {
-        cout << node -> data << " ";
+    if (node != NULL) {
+        cout << node->data << " ";
         preOrder(node->left);
         preOrder(node->right);
     }
 }
 
 void inOrder(TNode *node) {
-    if (node!= NULL) {
-        inOrder(node->left); 
-        cout << node -> data << " ";
+    if (node != NULL) {
+        inOrder(node->left);
+        cout << node->data << " ";
         inOrder(node->right);
     }
 }
 
 void postOrder(TNode *node) {
-    if (node!= NULL) {
-        postOrder(node->left); 
+    if (node != NULL) {
+        postOrder(node->left);
         postOrder(node->right);
-        cout << node -> data << " ";
+        cout << node->data << " ";
     }
 }
 
 void displayChild(TNode *node, int target) {
-    if (node!= NULL) {
+    if (node != NULL) {
         if (node->data == target) {
-            if (node->left!= NULL) {
+            if (node->left != NULL) {
                 cout << "Child: " << node->left->data << endl;
             }
-            if (node->right!= NULL) {
+            if (node->right != NULL) {
                 cout << "Child: " << node->right->data << endl;
             }
         } else {
@@ -341,7 +347,7 @@ void displayChild(TNode *node, int target) {
 }
 
 void displayDescendant(TNode *node, int target) {
-    if (node!= NULL) {
+    if (node != NULL) {
         if (node->data == target) {
             preOrder(node);
         } else {
@@ -351,50 +357,77 @@ void displayDescendant(TNode *node, int target) {
     }
 }
 
+TNode* findNode(TNode* node, int target) {
+    if (node == NULL) {
+        return NULL;
+    }
+    if (node->data == target) {
+        return node;
+    }
+    TNode* leftResult = findNode(node->left, target);
+    if (leftResult != NULL) {
+        return leftResult;
+    }
+    return findNode(node->right, target);
+}
+
+void addNode(TNode*& root) {
+    int parentData, childData;
+    char position;
+    cout << "Masukkan data parent node: ";
+    cin >> parentData;
+    cout << "Masukkan data child node: ";
+    cin >> childData;
+    cout << "Masukkan posisi child (L/R): ";
+    cin >> position;
+
+    if (root == NULL) {
+        root = new TNode(childData);
+        cout << "Root node created with data: " << childData << endl;
+        return;
+    }
+
+    TNode* parentNode = findNode(root, parentData);
+    if (parentNode != NULL) {
+        if (position == 'L' || position == 'l') {
+            if (parentNode->left == NULL) {
+                parentNode->left = new TNode(childData);
+            } else {
+                cout << "Left child already exists for node " << parentData << endl;
+            }
+        } else if (position == 'R' || position == 'r') {
+            if (parentNode->right == NULL) {
+                parentNode->right = new TNode(childData);
+            } else {
+                cout << "Right child already exists for node " << parentData << endl;
+            }
+        } else {
+            cout << "Invalid position. Use 'L' for left or 'R' for right." << endl;
+        }
+    } else {
+        cout << "Parent node with data " << parentData << " not found." << endl;
+    }
+}
+
 int main() {
-    TNode *root = NULL;
+    TNode* root = NULL;
 
     int choice;
-    cout << "Menu:" << endl;
-    cout << "1. Tambah node" << endl;
-    cout << "2. Tampilkan tree" << endl;
-    cout << "3. Tampilkan child" << endl;
-    cout << "4. Tampilkan descendant" << endl;
-    cout << "5. Keluar" << endl;
-    cout << "Pilihan: ";
-    cin >> choice;
+    do {
+        cout << "Menu:" << endl;
+        cout << "1. Tambah node" << endl;
+        cout << "2. Tampilkan tree" << endl;
+        cout << "3. Tampilkan child" << endl;
+        cout << "4. Tampilkan descendant" << endl;
+        cout << "5. Keluar" << endl;
+        cout << "Pilihan: ";
+        cin >> choice;
 
-    while (choice!= 5) {
         switch (choice) {
-            case 1: {
-                int dill_2311110048;
-                cout << "Masukkan data node: ";
-                cin >> dill_2311110048;
-                if (root == NULL) {
-                    root = new TNode(dill_2311110048);
-                } else {
-                    TNode *temp = root;
-                    while (true) {
-                        if (dill_2311110048 < temp->data) {
-                            if (temp->left == NULL) {
-                                temp->left = new TNode(dill_2311110048);
-                                break;
-                            } else {
-                                temp = temp->left;
-                            }
-                        } else {
-                            if (temp->right == NULL) {
-                                temp->right = new TNode(dill_2311110048);
-                                break;
-                            } else {
-                                temp = temp->right;
-                            }
-                        }
-                    }
-                }
+            case 1:
+                addNode(root);
                 break;
-            }
-            case 2: {
+            case 2:
                 cout << "Pre Order: ";
                 preOrder(root);
                 cout << endl;
@@ -405,7 +438,6 @@ int main() {
                 postOrder(root);
                 cout << endl;
                 break;
-            }
             case 3: {
                 int target;
                 cout << "Masukkan node target: ";
@@ -421,39 +453,83 @@ int main() {
                 cout << endl;
                 break;
             }
+            case 5:
+                cout << "Keluar." << endl;
+                break;
             default:
                 cout << "Pilihan tidak valid" << endl;
         }
-        cout << "Menu:" << endl;
-        cout << "1. Tambah node" << endl;
-        cout << "2. Tampilkan tree" << endl;
-        cout << "3. Tampilkan child" << endl;
-        cout << "4. Tampilkan descendant" << endl;
-        cout << "5. Keluar" << endl;
-        cout << "Pilihan: ";
-        cin >> choice;
-    }
+    } while (choice != 5);
 
     return 0;
 }
 
 ```
-Program ini dibuat untuk membalikkan kalimat. Cara kerja program ini adalah saat pengguna memasukkan kalimat, kalimat tersebut menggunakan stack "terbalikKalimat". Kalimat akan dibaca perkaraker, jika karakter yang dibaca berupa spasi, maka program akan membalik kata yang sudah terbaca sebelumnya. Spasi juga ditambahkan untuk memisahkan kata dalam kalimat. Jika bukan spasi, maka karakter tersebut dimasukkan ke dalam stack. Setelah selesai, program akan menampilkan kalimat asli yang dimasukkan pengguna dan kalimat yang telah dibalik.
+ Program ini dibuatuntuk mengelola dan menampilkan sebuah pohon biner (binary tree) dinamis. Pengguna dapat menambahkan node ke dalam pohon, serta menampilkan pohon dengan berbagai urutan traversal (pre-order, in-order, post-order), menampilkan child node dari suatu node, dan menampilkan seluruh descendant dari suatu node.
+Program menginisialisasi root pohon sebagai NULL lalu menampilkan menu berulang kali hingga pengguna memilih untuk keluar. 
+
+ Saat pengguna memilih pilihan 1, maka alur program akan meminta data node parent, data node child, dan posisi child (kiri/kanan). Jika root NULL, membuat node root dengan data child. Jika parent ditemukan, menambah child pada posisi yang sesuai jika belum ada child di posisi tersebut.
+
+ Jika pengguna memilih pilihan 2, maka program akan menampilkan tree dalam berbagai traversal: pre-order, in-order, dan post-order. 
+
+ Sementara itu, jika pengguna memilih untuk menampilkan child maupun descendant, maka program akan meminta pengguna memasukkan nilai node target kemudian menampilkan child node dari target node atau menampilkan seluruh descendant dari target node menggunakan pre-order traversal.
 
 ##### Output
-![Screenshot 2024-05-04 154817](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/cd08d788-14a5-4ee3-8dba-e4ca4aef1448)
 
-Program ini membalikkan kalimat dengan tidak hanya membalik urutan karakter atau huruf yang terdapat pada kata di dalam kalimat, namun juga membalikkan urutan posisi kata dalam kalimat. Sehingga urutan kata pertama menjadi yang terakhir dan kata terakhir menjadi kata petama. Huruf pertama menjadi huruf terakir dan huruf terakir menjadi huruf pertama, dan seterusnya.
+ 1) membuat tree
+    
+![Z(unguided 2 output pil 1)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/88a3ed10-f2f5-4bb4-a1eb-9424d46acc7e)
+
+![Z(unguided 2 output pil 1 b)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/075092a8-663e-40ae-bc8d-12002f482894)
+
+![Z(unguided 2 output pil 1 c)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/df6a59c8-4b94-4984-a6a3-742feec2764f)
+ 
+![Z(unguided 2 output pil 1d)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/06ba9511-934e-4a59-8567-db3101da1a08)
+
+![Z(unguided 2 output pil 1 e)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/f7ccd4bf-a973-481a-93bc-161d15f409f6)
+
+![Z(unguided 2 output pil 1 f)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/561225ed-8b47-4f7d-a378-689fce31c578)
+
+![Z(unguided 2 output pil 1 g)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/156a156e-d382-452f-808b-7fbbf14a1edf)
+
+ 2) menampilkan tree
+
+![Z(unguided 2 output pil 2)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/b9cb66a1-c8d5-4adf-8a4d-b304acd2a7a9)
+
+ 3) menampilkan child
+
+ ![Z(unguided 2 output pil 3)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/37f589c8-8a88-480b-a0cc-8d5d59a620ca)
+ 
+![Z(unguided 2 output pil 3 b)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/f297666d-d5d9-40ad-96f4-f68f8a04b9cc)
+
+![Z(unguided 2 output pil 3 c)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/6e2d8212-fd54-4f08-9bac-f0401c28900f) 
+
+ 4) menampilkan descendant
+
+![Z(unguided 2 output pil 4)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/ebd9f7b3-02f1-4dc3-80b6-3a4e2702b4b9)
+
+![Z(unguided 2 output pil 4 b)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/0772c651-ed32-4e2b-9456-fccc07039e5f)
+
+![Z(unguided 2 output pil 4 c)](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/27ed3a0d-ab94-4295-b352-a1ba41aee9de)  
 
 ##### Full Screenshot
-
-![Screenshot 2024-05-04 154833](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/6ca41c7f-8f6a-423c-adba-9be1e01a7c8e)
+![Screenshot 2024-06-11 091419](https://github.com/Dillthf/Algoritma-Pemrograman-dan-Struktur-Data-1/assets/161497877/279146d5-5ce8-4f00-8197-fca1ca94fa28)
 
 
 ## Kesimpulan
 
-Stack digunakan dengan metode item yang masuk terakhir akan diakses terlebih dahulu. Stack juga memiliki berbagai operasi seperti pop(), push(), top(), dan operasi lainnya. Stack dapat diaplikasikan pada program yang membutuhkan pengolahan data, penyimpanan, dan lainnya.
+Graf dan tree adalah dua jenis struktur data yang digunakan untuk menyimpan dan mengatur data secara efisien. Graf terdiri dari simpul-simpul yang dihubungkan oleh busur, yang dapat berarah atau tidak, serta berbobot atau tidak berbobot. Representasi graf umum meliputi matriks kedekatan dan senarai kedekatan. Tree, seperti hierarki keluarga, memiliki simpul induk, simpul anak, dan simpul daun, dengan akar sebagai simpul teratas. Setiap simpul di tree dihubungkan oleh edge, dan struktur ini diimplementasikan menggunakan pointer. Konsep penting pada tree mencakup tinggi, kedalaman, dan derajat simpul, serta subtree.
 
 ## Referensi
+[1] Zakaria, T. M. & Prijono, A. Konsep dan Implementasi Struktur Data. Bandung: Informatika. 2006. 
 
-[1] Shofwan H., Wayan J. Konsep Algoritme dan Aplikasinya dalam Bahasa Pemrograman C++. Edisi I. Yogyakarta:Andi. 2020.
+[2] N. Selma Karamy, “Pewarnaan Titik Pada Graf Dengan Menggunakan Algoritma Pewarnaan Barisan Sederhana Dalam Penataan Buku Perpustakaan,” in Conference on Research & Community Services, 2019, pp. 557–565. 
+
+[3] T. S. N. Anggraini, Lana Aristya, Rosyida, Isnaini ,Asih, “Penyelesaian Masalah Pewarnaan Graf Dengan Algoritma Genetika,” vol. 8, no. 1, pp.30–39, 2019
+
+[4] Oka S., Anak Agung K. Tree Structure Implementation Bebantenan. Journal of CSTID. Jimbaran : UNUD, 2019.
+
+[5] Dewi R., Gilang K. IMPLEMENTASI ALGORITMA BINARY TREE PADA SISTEM INFORMASI MULTILEVEL MARKETING. Jurnal Informatika. No.3 ,  Vol.  3. 2021
+
+[6] M. W. Saputra, A. A. K. O. Sudana, dan I. M. Sukarsa, “Implementasi Struktur Data tree pada
+Sistem Informasi Upacara yadnya Berbasis Android”, MERPATI, vol. 2, no. 3, Des 2014.
